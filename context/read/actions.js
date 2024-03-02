@@ -1,0 +1,1 @@
+export const SEARCH_NOVELS = 'SEARCH_NOVELS'
