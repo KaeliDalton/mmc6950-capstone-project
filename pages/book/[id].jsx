@@ -1,10 +1,10 @@
-//BOOKER STARTER CODE, LOOK AT 'PLAGIARIZED' CODE FOR SOLUTION AND AGAIN CHANGE TO FIT NEEDS
+
 import Head from 'next/head'
 import { useRouter } from "next/router"
 import { withIronSessionSsr } from "iron-session/next";
 import sessionOptions from "../../config/session";
 import db from '../../db'
-import styles from '../../styles/Book.module.css'
+
 
 export const getServerSideProps = withIronSessionSsr(
   async function getServerSideProps({ req, params }) {
@@ -32,12 +32,12 @@ export default function findBook(props) {
     book = props.book
     isRead = true
   } else
-    book = bookSearchResults.find(book => book.googleId === bookId)
+    book = novelSearchResults.find(book => book.googleId === bookId)
 
   useEffect(() => {
     if (!props.book && !book)
       router.push('/')
-  }, [props.book, bookSearchResults, book, router])
+  }, [props.book, novelSearchResults, book, router])
 
   async function markRead() {
     const res = await fetch('/api/book', {
@@ -59,7 +59,7 @@ export default function findBook(props) {
       {
         book &&
         <main>
-          <BookInfo isReadBook={isRead} {...book}/>
+          <NovelInfo isReadBook={isRead} {...book}/>
           <div>
             {
               <button onClick={markRead}>
@@ -73,7 +73,7 @@ export default function findBook(props) {
   )
 }
 
-function BookInfo({
+function NovelInfo({
   title,
   author,
   imageLink,
@@ -91,7 +91,6 @@ function BookInfo({
             <h2>By: {author.join(", ").replace(/, ([^,]*)$/, ', and $1')}</h2>
           }
         </div>
-        
           <img src={imageLink}/>
       </div>
       <p>Description:<br/>{description}</p>

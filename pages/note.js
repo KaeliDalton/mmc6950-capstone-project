@@ -3,6 +3,7 @@ import Head from "next/head";
 import { withIronSessionSsr } from "iron-session/next";
 import sessionOptions from "../config/session";
 import db from "../db";
+import NoteList from "@/components/noteList";
 
 export const getServerSideProps = withIronSessionSsr(
   async function getServerSideProps({ req }) {
@@ -40,11 +41,7 @@ export default function Notes(props) {
 
       <main>
         <h1>Your Notes</h1>
-       <h2>{props.notes.title} </h2> 
-       <h3>{props.notes.author} </h3> 
-       <h4>{props.notes.dateStarted}</h4>
-       <h4>{props.notes.dateFinished}</h4>
-       <h4>{props.notes.noteBody}</h4>
+      {props.notes.length > 0 ? <NoteList notes={props.notes} /> : <p> No Notes Found.</p>}
       </main>
     </>
   );

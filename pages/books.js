@@ -3,6 +3,7 @@ import Head from "next/head";
 import { withIronSessionSsr } from "iron-session/next";
 import sessionOptions from "../config/session";
 import db from "../db";
+import NovelList from "@/components/novelList";
 
 export const getServerSideProps = withIronSessionSsr(
   async function getServerSideProps({ req }) {
@@ -40,12 +41,17 @@ export default function Favorites(props) {
 
       <main>
         <h1>Favorite Books</h1>
-        <h2> {props.readBooks.title}</h2>
-        <h3>{props.readBooks.author} </h3>
-        <img src="${props.readBooks.imageLink}"/>
-        <h4>{props.readBooks.pubYear}</h4>
-        <p>{props.readBooks.description}</p>
+        {props.readBooks.length > 0 ? <NovelList books={props.readBooks} /> : <NoNovelsFound />}
       </main>
     </>
   );
+}
+
+function NoNovelsFound() {
+  return (
+    <div>
+      <p>No books found in your list.</p>
+      <p>If you <Link href="/search">search</Link> you can add new books!</p>
+    </div>
+  )
 }
