@@ -16,6 +16,10 @@ export default function Home() {
       <main className={`${styles.main}`}>
         <h1>MyReads Home</h1>
         <p>With MyReads you can search for books, add them to your read list, write notes, and view your notes.</p>
+       {/* Put it so that if logged in, see to search or create a note, and if logged out see those */}
+        <Link href="/login">Login</Link>
+        <p>or</p>
+        <Link href="/signup" >Sign Up</Link>
       </main>
     </>
   );
