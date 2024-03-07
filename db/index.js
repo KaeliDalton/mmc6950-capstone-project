@@ -1,7 +1,7 @@
-import * as user from './user'
-import * as auth from './auth'
-import * as note from './note'
-import * as book from './book'
+import * as user from './controllers/user'
+import * as auth from './controllers/auth'
+import * as note from './controllers/note'
+import * as book from './controllers/book'
 
 
 export default {

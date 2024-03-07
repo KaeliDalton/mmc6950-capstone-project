@@ -1,5 +1,5 @@
 
-import User from 'db/models/user.js'
+import User from '../models/user'
 import { normalizeId, dbConnect } from './util'
 
 export async function getAll(userId) {
