@@ -5,9 +5,9 @@ import { useEffect } from 'react'
 import { withIronSessionSsr } from "iron-session/next";
 import sessionOptions from "../../config/session";
 import { useReadContext } from "../../context/read"
-import Header from '../../components/header'
-import db from '../../db'
 
+import db from '../../db'
+import Header from '../components/header';
 
 
 export const getServerSideProps = withIronSessionSsr(
