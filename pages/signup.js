@@ -44,7 +44,7 @@ export default function Signup(props){
         if (!username.trim()) return setError("Must have username and password")
         if (!password.trim()) return setError("Must have password")
         if (!confirmPassword.trim()) return setError("You must confirm password to create account")
-        if (!password !== confirmPassword) return setError("Passwords must match")
+        if (password !== confirmPassword) return setError("Passwords must match")
 
         try {
             const res = await fetch('/api/auth/signup', {
@@ -70,7 +70,7 @@ export default function Signup(props){
             <Header isLoggedIn={props.isLoggedIn} />
             <main>
                 <h1>Create an account:</h1>
-                <form>
+                <form onSubmit={handleAccountCreation} >
                 <label htmlFor="username">Username: </label>
                 <input
                     type="text"

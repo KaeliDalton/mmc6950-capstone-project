@@ -1,7 +1,21 @@
 import Head from "next/head";
 import Header from '../components/header'
 import Link from 'next/link'
+import sessionOptions from '../config/session'
+import { withIronSessionSsr } from "iron-session/next";
 
+export const getServerSideProps = withIronSessionSsr(
+  async function getServerSideProps({req}){
+      const {user} = req.session
+      const props = {}
+      if (user){
+          props.user = req.session.user
+      }
+      props.isLoggedIn = !!user
+      return {props}
+  },
+  sessionOptions
+)
 
 export default function Home() {
   return (

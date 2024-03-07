@@ -2,6 +2,9 @@
   "name": "mmc6950-capstone-project",
   "version": "0.1.0",
   "private": true,
+  "config": {
+    "DB_NAME": "capstone_db"
+  },
   "scripts": {
     "dev": "npm run mongo && next dev",
     "build": "next build",
