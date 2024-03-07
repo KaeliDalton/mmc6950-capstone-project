@@ -3,7 +3,8 @@ import Head from "next/head";
 import { withIronSessionSsr } from "iron-session/next";
 import sessionOptions from "../config/session";
 import db from "../db";
-import NovelList from "@/components/novelList";
+import NovelList from "../components/novelList";
+import Link from 'next/link'
 
 export const getServerSideProps = withIronSessionSsr(
   async function getServerSideProps({ req }) {

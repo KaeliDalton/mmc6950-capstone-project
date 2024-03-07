@@ -1,6 +1,7 @@
 import Head from "next/head";
 import Header from '../components/header'
 import styles from "@/styles/Home.module.css";
+import Link from 'next/link'
 
 
 export default function Home() {

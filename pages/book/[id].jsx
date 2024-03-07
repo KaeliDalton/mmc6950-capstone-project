@@ -1,9 +1,12 @@
 
 import Head from 'next/head'
 import { useRouter } from "next/router"
+import { useEffect } from 'react'
 import { withIronSessionSsr } from "iron-session/next";
 import sessionOptions from "../../config/session";
 import db from '../../db'
+import { useReadContext } from '../context/read';
+import Header from '../components/header';
 
 
 export const getServerSideProps = withIronSessionSsr(
@@ -25,6 +28,8 @@ export const getServerSideProps = withIronSessionSsr(
 export default function findBook(props) {
   const router = useRouter()
   const bookId = router.query.id
+  const {isLoggedIn} = props
+  const [{novelSearchResults}] = useReadContext()
 
   let isRead = false
   let book
@@ -56,6 +61,8 @@ export default function findBook(props) {
         <meta name="description" content="View a book on MyReads" />
         
       </Head>
+      <Header isLoggedIn={isLoggedIn} />
+
       {
         book &&
         <main>
