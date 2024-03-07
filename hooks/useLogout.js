@@ -1,4 +1,3 @@
-import user from '@/db/models/user'
 import {useRouter} from 'next/router'
 
 export default function useLogout(){
