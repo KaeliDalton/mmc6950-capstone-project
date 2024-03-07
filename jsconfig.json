@@ -1,8 +1,0 @@
-{
-    "compilerOptions": {
-      "paths": {
-        "@/*": ["./*"]
-      }
-    }
-  }
- //Broken again........ (Cannot find global value 'Promise')
