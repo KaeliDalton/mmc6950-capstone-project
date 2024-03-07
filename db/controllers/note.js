@@ -2,7 +2,7 @@
 
 import Note from '../models/note'
 import User from '../models/user'
-import dbConnect from './util/connection'
+import dbConnect from './util'
 
 export async function create(title, author, dateStarted, dateFinished, noteBody, userId){
     if(!(title && author && noteBody))
