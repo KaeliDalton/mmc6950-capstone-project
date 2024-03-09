@@ -1,34 +1,34 @@
 //edit as needed
-import Head from 'next/head'
-import Link from 'next/link'
-import {useState} from 'react'
-import {useRouter} from 'next/router'
-import {withIronSessionSsr} from 'iron-session/next'
-import sessionOptions from '../config/session'
-import Header from '../components/header'
+import Head from 'next/head';
+import Link from 'next/link';
+import { useState } from 'react';
+import { useRouter } from 'next/router';
+import { withIronSessionSsr } from 'iron-session/next';
+import sessionOptions from '../config/session';
+import Header from '../components/header';
 
 export const getServerSideProps = withIronSessionSsr(
-    async function getServerSideProps({req}){
-        const {user} = req.session
-        const props = {}
+    async function getServerSideProps({ req }){
+        const { user } = req.session;
+        const props = {};
         if (user){
-            props.user = req.session.user
+            props.user = req.session.user;
         }
-        props.isLoggedIn = !!user
-        return {props}
+        props.isLoggedIn = !!user;
+        return { props };
     },
     sessionOptions
-)
+);
 
 export default function Login(props){
     const router = useRouter()
-    const [{username, password}, setForm] = useState({
+    const [{ username, password }, setForm] = useState({
         username: "",
         password: "",
-    })
-    const [error, setError] = useState("")
-    function handleChange(e){
-        setForm({ username, password, ...{ [e.target.name]: e.target.value}})
+    });
+    const [error, setError] = useState("");
+    function handleChange(e) {
+        setForm({ username, password, ...{ [e.target.name]: e.target.value } })
     }
     async function handleLogin(e){
         e.preventDefault()

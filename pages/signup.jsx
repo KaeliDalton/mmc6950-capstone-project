@@ -1,33 +1,33 @@
-import Head from 'next/head'
-import Link from 'next/link'
-import {withIronSessionSsr} from 'iron-session/next'
-import sessionOptions from '../config/session'
-import {useState} from 'react'
-import {useRouter} from 'next/router'
+import Head from 'next/head';
+import Link from 'next/link';
+import {withIronSessionSsr} from 'iron-session/next';
+import sessionOptions from '../config/session';
+import { useState } from "react";
+import {useRouter} from 'next/router';
 import Header from '../components/header'
 
 export const getServerSideProps = withIronSessionSsr(
-    async function getServerSideProps({req}){
-        const {user} = req.session
-        const props = {}
+    async function getServerSideProps({ req }){
+        const { user } = req.session;
+        const props = {};
         if (user){
-            props.user = req.session.user
+            props.user = req.session.user;
         }
-        props.isLoggedIn = !!user
-        return {props}
+        props.isLoggedIn = !!user;
+        return { props };
     },
     sessionOptions
-)
+);
 
 export default function Signup(props){
-    const router = useRouter()
+    const router = useRouter();
     const [
-        { username, password, "confirm-password": confirmPassword},
-        setForm
-    ] = useState({
+        { username, password, "confirm-password": confirmPassword },
+        setForm,
+      ] = useState({
         username: "",
         password: "",
-        "confirm-password": ""
+        "confirm-password": "",
     })
     const [error, setError] = useState("")
 
@@ -36,11 +36,11 @@ export default function Signup(props){
             username,
             password,
             "confirm-password": confirmPassword,
-            ...{[e.target.name]: e.target.value.trim()},
-        })
+            ...{ [e.target.name]: e.target.value.trim() },
+        });
     }
-    async function handleAccountCreation(e){
-        e.preventDefault()
+    async function handleAccountCreation(e) {
+        e.preventDefault();
         if (!username.trim()) return setError("Must have username and password")
         if (!password.trim()) return setError("Must have password")
         if (!confirmPassword.trim()) return setError("You must confirm password to create account")
@@ -52,13 +52,13 @@ export default function Signup(props){
                 headers: {
                     "content-type": "application/json",
                 },
-                body: JSON.stringify({username, password}),
-            })
+                body: JSON.stringify({ username, password }),
+            });
             if (res.status === 200) return router.push("/")
-            const {error: message} = await res.json()
-            setError(message)
-        } catch (err){
-            console.log(err)
+            const { error: message } = await res.json();
+            setError(message);
+        } catch (err) {
+            console.log(err);
         }
     }
     return (
@@ -66,8 +66,11 @@ export default function Signup(props){
             <Head>
                 <title>MyReads Sign Up</title>
                 <meta name='description' content='Create an account for MyReads' />
+                <link rel="icon" href='/'/>
             </Head>
+
             <Header isLoggedIn={props.isLoggedIn} />
+
             <main>
                 <h1>Create an account:</h1>
                 <form onSubmit={handleAccountCreation} >
@@ -103,5 +106,5 @@ export default function Signup(props){
                 </Link>
             </main>
         </>
-    )
+    );
 }
