@@ -27,7 +27,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Header isLoggedIn={props.isLoggedIn} username={props?.user?.username} />
-      <main className={`${styles.main}`}>
+      <main>
         <h1>MyReads Home</h1>
         <p>With MyReads you can search for books, add them to your read list, write notes, and view your notes.</p>
        {/* Put it so that if logged in, see to search or create a note, and if logged out see those */}

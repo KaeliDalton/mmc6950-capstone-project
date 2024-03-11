@@ -1,4 +1,4 @@
-
+//spaces between words would be super neat
 import Head from 'next/head'
 import {useState} from 'react'
 import {useRouter} from 'next/router'
@@ -45,7 +45,7 @@ export default function Create(props){
 
     async function handleNoteCreation(e){
         e.preventDefault()
-        if (!title.trim()) return setError("Must include tile")
+        if (!title.trim()) return setError("Must include title")
         if (!author.trim()) return setError('Must include author')
         if (!noteBody.trim()) return setError('Must have note body')
 
