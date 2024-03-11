@@ -2,8 +2,6 @@ export default function NovelPreview({
     title,
     authors,
     image,
-    year
-    // go check on what these attributes are called in my cose
 }) {
     return (
         <div>

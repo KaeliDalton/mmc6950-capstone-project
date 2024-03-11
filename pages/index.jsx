@@ -30,10 +30,16 @@ export default function Home() {
       <main>
         <h1>MyReads Home</h1>
         <p>With MyReads you can search for books, add them to your read list, write notes, and view your notes.</p>
-       {/* Put it so that if logged in, see to search or create a note, and if logged out see those */}
         <Link href="/login">Login</Link>
         <p>or</p>
         <Link href="/signup" >Sign Up</Link>
+
+        <p>If you've already logged in, try</p>
+        <Link href='/search'>Searching,</Link>
+        <p> </p>
+        <Link href='/books'>Viewing your read list,</Link>
+        <p>or</p>
+        <Link href='/create'>Creating a note!</Link>
       </main>
     </>
   );

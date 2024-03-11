@@ -42,7 +42,6 @@ export default function Search() {
         ...volumeInfo,
         googleId: id,
         image: volumeInfo?.imageLinks?.thumbnail
-        // Add anything needed for other parts of the data
       }))
     })
   }

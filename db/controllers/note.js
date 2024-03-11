@@ -1,5 +1,3 @@
-//I think this should create a note and add it to the user's profile but this controller possibly needs more work for proper implementation
-
 import Note from '../models/note'
 import User from '../models/user'
 import dbConnect from './util'

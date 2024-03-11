@@ -1,4 +1,3 @@
-//edit as needed
 import Head from 'next/head';
 import Link from 'next/link';
 import { useState } from 'react';
@@ -32,7 +31,7 @@ export default function Login(props){
     }
     async function handleLogin(e){
         e.preventDefault()
-        if (!username.trim() || password.trim())
+        if (!username.trim() || !password.trim())
         return setError('Must have username and password')
     try {
         const res = await fetch('/api/auth/login', {

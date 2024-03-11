@@ -5,7 +5,6 @@ export default function Header(props){
     const logout = useLogout()
     return (
         <header>
-            {/* look into making this the logo and linking to home via logo */}
             <p>
                 <Link href='/'>MyReads</Link>
             </p>

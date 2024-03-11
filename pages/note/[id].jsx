@@ -1,1 +1,0 @@
-// implement individual note display after viewing list of notes

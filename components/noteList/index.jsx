@@ -10,4 +10,3 @@ export default function NoteList({notes}){
         </div>
     )
 }
-//based off book search list but might need to adjust based on how want note list

@@ -1,4 +1,4 @@
-//spaces between words would be super neat
+//spaces between words would be super neat -> troubleshoot this down the road
 import Head from 'next/head'
 import {useState} from 'react'
 import {useRouter} from 'next/router'
@@ -28,7 +28,7 @@ export default function Create(props){
         author: "",
         dateStarted: "",
         dateFinished: "",
-        noteBody: "",
+        noteBody: " ",
     })
     const [error, setError] = useState("")
 
