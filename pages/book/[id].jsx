@@ -25,6 +25,34 @@ export const getServerSideProps = withIronSessionSsr(
   sessionOptions
 );
 
+function NovelInfo({
+  title,
+  author,
+  imageLink,
+  description,
+  isRead,
+  pubYear,
+}) {
+  return (
+    <>
+      <div>
+        <div>
+          <h1>{title}{isRead}</h1>
+          {
+            author && author.length > 0 &&
+            <h2>By: {author.join(", ").replace(/, ([^,]*)$/, ', and $1')}</h2>
+          }
+        </div>
+          <img src={imageLink}/>
+      </div>
+      <p>Description:<br/>{description}</p>
+      <p>Published: {pubYear}</p>
+    </>
+  )
+}
+
+
+
 export default function FindBook(props) {
   const router = useRouter()
   const bookId = router.query.id
@@ -76,32 +104,6 @@ export default function FindBook(props) {
           </div>
         </main>
       }
-    </>
-  )
-}
-
-function NovelInfo({
-  title,
-  author,
-  imageLink,
-  description,
-  isRead,
-  pubYear,
-}) {
-  return (
-    <>
-      <div>
-        <div>
-          <h1>{title}{isRead}</h1>
-          {
-            author && author.length > 0 &&
-            <h2>By: {author.join(", ").replace(/, ([^,]*)$/, ', and $1')}</h2>
-          }
-        </div>
-          <img src={imageLink}/>
-      </div>
-      <p>Description:<br/>{description}</p>
-      <p>Published: {pubYear}</p>
     </>
   )
 }
