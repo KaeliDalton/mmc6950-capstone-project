@@ -25,7 +25,7 @@ export const getServerSideProps = withIronSessionSsr(
   sessionOptions
 );
 
-export default function findBook(props) {
+export default function FindBook(props) {
   const router = useRouter()
   const bookId = router.query.id
   const {isLoggedIn} = props
