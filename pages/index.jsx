@@ -34,7 +34,7 @@ export default function Home() {
         <p>or</p>
         <Link href="/signup" >Sign Up</Link>
 
-        <p>If you've already logged in, try</p>
+        <p>If you have already logged in, try</p>
         <Link href='/search'>Searching,</Link>
         <p> </p>
         <Link href='/books'>Viewing your read list,</Link>
