@@ -1,4 +1,4 @@
-import { Schema, model, models} from 'mongoose'
+import { Schema} from 'mongoose'
 
 const NoteSchema = new Schema({
     title: {
@@ -20,4 +20,4 @@ const NoteSchema = new Schema({
         required: true,
     }
 })
-export default models.Note || model('Note', NoteSchema)
+export default NoteSchema
