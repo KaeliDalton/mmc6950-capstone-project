@@ -1,4 +1,6 @@
 import { Schema, model, models} from 'mongoose'
+import NoteSchema from './note'
+import BookSchema from './book'
 import bcrypt from 'bcrypt'
 
 const UserSchema = new Schema({

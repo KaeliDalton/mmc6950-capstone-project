@@ -36,7 +36,7 @@ export default function Favorites(props) {
   return (
     <>
       <Head>
-        <title>Booker Favorites</title>
+        <title>MyReads Favorites</title>
         <meta name="description" content="Your favorite books on Booker" />
       </Head>
 
