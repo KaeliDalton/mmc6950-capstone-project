@@ -5,9 +5,9 @@ export default function Header(props){
     const logout = useLogout()
     return (
         <header>
-            <img src='/myreads.png'>
+            {/* <img src='/myreads.png'>
                 <Link href='/'>MyReads</Link>
-            </img>
+            </img> */}
             <div>
                 {props.isLoggedIn ? (
                     <>

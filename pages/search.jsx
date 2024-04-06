@@ -52,7 +52,7 @@ export default function Search() {
       <Head>
         <title>MyReads Search</title>
         <meta name="description" content="MyReads Search Page" />
-        <link rel="icon" href="/favicon.png" />
+        {/* <link rel="icon" href="/favicon.png" /> */}
       </Head>
       <Header isLoggedIn={props.isLoggedIn} />
       <main>

@@ -67,7 +67,7 @@ export default function Create(props){
         <Head>
             <title>MyReads Note Creation</title>
             <meta name="description" content="Create a note in your MyReads account" />
-            <link rel="icon" href="/favicon.png" />
+            {/* <link rel="icon" href="/favicon.png" /> */}
         </Head>
         <Header isLoggedIn={props.isLoggedIn} />
 
