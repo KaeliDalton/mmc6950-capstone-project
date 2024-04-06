@@ -5,6 +5,7 @@ import {useRouter} from 'next/router'
 import {withIronSessionSsr} from 'iron-session/next'
 import sessionOptions from '../config/session'
 import Header from '../components/header'
+import styles from '../styles/form.module.css'
 
 export const getServerSideProps = withIronSessionSsr(
     async function getServerSideProps({req}){
@@ -66,13 +67,14 @@ export default function Create(props){
         <Head>
             <title>MyReads Note Creation</title>
             <meta name="description" content="Create a note in your MyReads account" />
+            <link rel="icon" href="/favicon.png" />
         </Head>
         <Header isLoggedIn={props.isLoggedIn} />
 
         <main>
-            <h1>Create a note below:</h1>
+            <h1 className={styles.title}>Create a note below:</h1>
 
-            <form onSubmit={handleNoteCreation} >
+            <form className={styles.form} onSubmit={handleNoteCreation} >
                 <label htmlFor="title">Title:</label>
                 <input
                 type="text"

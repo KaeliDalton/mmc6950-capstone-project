@@ -37,6 +37,7 @@ export default function Notes(props) {
       <Head>
         <title>MyReads Notes</title>
         <meta name="description" content="Your notes on MyReads" />
+        <link rel="icon" href="/favicon.png" />
       </Head>
 
       <main>

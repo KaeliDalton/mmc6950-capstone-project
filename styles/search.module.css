@@ -1,0 +1,43 @@
+.title, .label, .form > button {
+    color: var(--book-color);
+}
+
+.body{
+    color: var(--note-color);
+}
+
+.label{
+    font-size: 18px;
+}
+
+.input{
+    background-color: var(--note-color);
+    color: var(--primary-color);
+    padding: 10px;
+    border: none;
+    border-radius: 12px;
+   
+}
+.form > button{
+    background-color: var(--primary-color);
+    border: none;
+    color: var(--book-color);
+    padding: 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+    margin: 4px 2px;
+    border-radius: 12px;
+}
+
+.results{
+    display: flex;
+    flex-direction: column;
+    column-count: auto;
+    column-width: 33%;
+}
+
+.image{
+    width: 100px;
+}

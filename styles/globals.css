@@ -1,0 +1,85 @@
+:root {
+    --primary-color: #272355 ;
+    --note-color: #99788B;
+    --book-color: #bbba7b;
+    --background-color: #1E3B2E;
+    --accent-color: #551E3D;
+}
+
+a, Link {
+    text-decoration: none;
+    color: var(--book-color);
+}
+
+h1 {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+    font-size: 24pt;
+}
+
+h2 {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+    font-size: 22pt;
+}
+
+h3 {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 20pt;
+}
+
+h4{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 18pt;
+}
+
+h5 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 18pt;
+}
+
+h6 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 16pt;
+}
+
+p {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 16pt;
+    color: var(--note-color);
+}
+
+main {
+    background-color: var(--background-color);
+}
+
+form-input {
+    background-color: var(--book-color);
+    color: var(--primary-color);
+}
+
+form-labels {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 18pt;
+    color: var(--note-color);
+}
+
+.button {
+    background-color: var(--primary-color);
+    border: none;
+    padding: 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20pt;
+    margin: 4px 2px;
+    border-radius: 12px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+/* @media (max-width: 800px) {
+
+} */
+
+@media (max-width: 400px)
+

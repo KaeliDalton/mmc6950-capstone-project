@@ -5,6 +5,7 @@ import { useRouter } from 'next/router';
 import { withIronSessionSsr } from 'iron-session/next';
 import sessionOptions from '../config/session';
 import Header from '../components/header';
+import styles from '../styles/login.module.css'
 
 export const getServerSideProps = withIronSessionSsr(
     async function getServerSideProps({ req }){
@@ -53,11 +54,12 @@ export default function Login(props){
         <Head>
             <title>MyReads Log In Page</title>
             <meta name="description" content="MyReads Log In Page"/>
+            <link rel="icon" href="/favicon.png" />
         </Head>
         <Header  isLoggedIn={props.isLoggedIn}/>
         <main>
-            <h1>Welcome! Please log in below</h1>
-            <form onSubmit={handleLogin}>
+            <h1 className={styles.title}>Welcome! Please log in below</h1>
+            <form className={styles.form} onSubmit={handleLogin}>
                 <label htmlFor="username">Username:</label>
                 <input type="text" name="username" id="username" onChange={handleChange} value={username} />
                 <label httmlFor="password" >Password:</label>

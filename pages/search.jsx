@@ -6,6 +6,7 @@ import NovelList from "../components/novelList";
 import * as actions from '../context/read/actions'
 import {useState, useRef} from 'react'
 import {withIronSessionSsr} from 'iron-session/next'
+import styles from '../styles/search.module.css'
 
 export const getServerSideProps = withIronSessionSsr(
   async function getServerSideProps({req}) {
@@ -51,12 +52,13 @@ export default function Search() {
       <Head>
         <title>MyReads Search</title>
         <meta name="description" content="MyReads Search Page" />
+        <link rel="icon" href="/favicon.png" />
       </Head>
       <Header isLoggedIn={props.isLoggedIn} />
       <main>
-        <h1>MyReads Book Search</h1>
-        <form onSubmit={handleSubmit}>
-          <label htmlFor="novel-search">Search by author, title, and/or keywords:</label>
+        <h1 className={styles.title}>MyReads Book Search</h1>
+        <form onSubmit={handleSubmit} className={styles.form}>
+          <label className={styles.label} htmlFor="novel-search">Search by author, title, and/or keywords:</label>
           <div>
             <input
               type="text"
@@ -70,7 +72,7 @@ export default function Search() {
         </form>
         {
            novelSearchResults?.length
-           ? <NovelList books={novelSearchResults} />
+           ? <NovelList books={novelSearchResults} className={styles.results}/>
            : <NoResults {...{inputRef, previousQuery}} clearSearch={() => setQuery("")} />
         }
       </main>

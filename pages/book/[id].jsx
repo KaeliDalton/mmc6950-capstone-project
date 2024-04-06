@@ -87,6 +87,7 @@ export default function FindBook(props) {
       <Head>
         <title>MyReads Book Information</title>
         <meta name="description" content="View a book on MyReads" />
+        <link rel="icon" href="/favicon.png" />
         
       </Head>
       <Header isLoggedIn={isLoggedIn} />

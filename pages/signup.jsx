@@ -5,6 +5,7 @@ import sessionOptions from '../config/session';
 import { useState } from "react";
 import {useRouter} from 'next/router';
 import Header from '../components/header'
+import styles from '../styles/signup.module.css'
 
 export const getServerSideProps = withIronSessionSsr(
     async function getServerSideProps({ req }){
@@ -66,14 +67,14 @@ export default function Signup(props){
             <Head>
                 <title>MyReads Sign Up</title>
                 <meta name='description' content='Create an account for MyReads' />
-                <link rel="icon" href='/'/>
+                <link rel="icon" href='/favicon.png'/>
             </Head>
 
             <Header isLoggedIn={props.isLoggedIn} />
 
             <main>
-                <h1>Create an account:</h1>
-                <form onSubmit={handleAccountCreation} >
+                <h1 className={styles.title}>Create an account:</h1>
+                <form onSubmit={handleAccountCreation}  className={styles.form}>
                 <label htmlFor="username">Username: </label>
                 <input
                     type="text"
@@ -101,9 +102,13 @@ export default function Signup(props){
                  <button>Create Account</button>
                  {error && <p>{error}</p>}
                 </form>
+                <p>
+                Do you want to
                 <Link href="/login">
-                    <p>Do you want to Log In instead?</p>
+                    <p> Log In </p>
                 </Link>
+                instead?
+                </p>
             </main>
         </>
     );
