@@ -1,4 +1,4 @@
-p {
+.p {
     color: var(--accent-color);
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 16pt;
