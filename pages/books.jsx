@@ -5,6 +5,7 @@ import sessionOptions from "../config/session";
 import db from "../db";
 import NovelList from "../components/novelList";
 import Link from 'next/link'
+import Footer from "../components/footer";
 
 export const getServerSideProps = withIronSessionSsr(
   async function getServerSideProps({ req }) {
@@ -45,6 +46,7 @@ export default function Favorites(props) {
         <h1>Favorite Books</h1>
         {props.readBooks.length > 0 ? <NovelList books={props.readBooks} /> : <NoNovelsFound />}
       </main>
+      <Footer />
     </>
   );
 }

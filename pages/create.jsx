@@ -6,6 +6,7 @@ import {withIronSessionSsr} from 'iron-session/next'
 import sessionOptions from '../config/session'
 import Header from '../components/header'
 import styles from '../styles/form.module.css'
+import Footer from '../components/footer'
 
 export const getServerSideProps = withIronSessionSsr(
     async function getServerSideProps({req}){
@@ -119,6 +120,7 @@ export default function Create(props){
                 {error && <p>{error}</p>}
             </form>
         </main>
+        <Footer />
         </>
     )
 }

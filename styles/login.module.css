@@ -1,5 +1,6 @@
 .title{
     color: var(--note-color);
+    text-align: center;
 }
 
 .label{
@@ -43,4 +44,8 @@
     color: var(--book-color);
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 16pt;
+}
+
+.signup {
+    text-align: center;
 }

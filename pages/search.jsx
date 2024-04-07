@@ -7,6 +7,7 @@ import * as actions from '../context/read/actions'
 import {useState, useRef} from 'react'
 import {withIronSessionSsr} from 'iron-session/next'
 import styles from '../styles/search.module.css'
+import Footer from "../components/footer";
 
 export const getServerSideProps = withIronSessionSsr(
   async function getServerSideProps({req}) {
@@ -76,6 +77,7 @@ export default function Search() {
            : <NoResults {...{inputRef, previousQuery}} clearSearch={() => setQuery("")} />
         }
       </main>
+      <Footer/>
     </>
   )
 }

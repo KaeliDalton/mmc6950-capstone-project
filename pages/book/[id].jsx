@@ -7,6 +7,7 @@ import sessionOptions from "../../config/session";
 import { useReadContext } from "../../context/read"
 import db from '../../db'
 import Header from '../../components/header';
+import Footer from '../../components/footer';
 
 
 export const getServerSideProps = withIronSessionSsr(
@@ -105,6 +106,7 @@ export default function FindBook(props) {
           </div>
         </main>
       }
+      <Footer />
     </>
   )
 }

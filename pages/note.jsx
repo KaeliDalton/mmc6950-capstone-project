@@ -4,6 +4,7 @@ import { withIronSessionSsr } from "iron-session/next";
 import sessionOptions from "../config/session";
 import db from "../db";
 import NoteList from "../components/noteList";
+import Footer from "../components/footer";
 
 export const getServerSideProps = withIronSessionSsr(
   async function getServerSideProps({ req }) {
@@ -44,6 +45,7 @@ export default function Notes(props) {
         <h1>Your Notes</h1>
       {props.notes.length > 0 ? <NoteList notes={props.notes} /> : <p> No Notes Found.</p>}
       </main>
+      <Footer />
     </>
   );
 }

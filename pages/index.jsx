@@ -4,6 +4,7 @@ import Link from 'next/link'
 import sessionOptions from '../config/session'
 import { withIronSessionSsr } from "iron-session/next";
 import styles from '../styles/Home.module.css'
+import Footer from "../components/footer";
 
 export const getServerSideProps = withIronSessionSsr(
   async function getServerSideProps({req}){
@@ -42,6 +43,7 @@ export default function Home() {
         <p>or</p>
         <Link href='/create'>Creating a note!</Link>
       </main>
+      <Footer />
     </>
   );
 }
