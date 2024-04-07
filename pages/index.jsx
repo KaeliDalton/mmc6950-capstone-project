@@ -32,16 +32,20 @@ export default function Home() {
       <main className={styles.main}>
         <h1 className={styles.title}>MyReads Home</h1>
         <p>With MyReads you can search for books, add them to your read list, write notes, and view your notes.</p>
-        <Link href="/login">Login</Link>
+        <div className={styles.options}>
+        <Link href="/login" className={styles.Link}>Login</Link>
         <p>or</p>
-        <Link href="/signup" >Sign Up</Link>
+        <Link href="/signup" className={styles.Link}>Sign Up</Link>
 
-        <p>If you have already logged in, try</p>
-        <Link href='/search'>Searching,</Link>
-        <p> </p>
-        <Link href='/books'>Viewing your read list,</Link>
-        <p>or</p>
-        <Link href='/create'>Creating a note!</Link>
+        <br/>
+
+        <p>If you have already logged in, try
+        <Link href='/search' className={styles.Link}> Searching, </Link>
+        <Link href='/books' className={styles.Link}> Viewing your read list, </Link>
+        or
+        <Link href='/create' className={styles.Link}> Creating a note! </Link>
+        </p>
+        </div>
       </main>
       <Footer />
     </>

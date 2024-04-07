@@ -51,6 +51,9 @@ p {
 
 main {
     background-color: var(--background-color);
+    height: 800px;
+    margin-top: 0%;
+    padding-top: 0%;
 }
 
 form-input {

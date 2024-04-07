@@ -18,15 +18,17 @@
     border-radius: 12px;
    
 }
-.form > button{
+.form > button {
+    cursor: pointer;
+    transition: 0.15s ease;
     background-color: var(--primary-color);
-    border: none;
     color: var(--book-color);
+    font-size: 20pt;
+    border: none;
     padding: 20px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    font-size: 20px;
     margin: 4px 2px;
     border-radius: 12px;
 }

@@ -67,7 +67,8 @@ export default function Search() {
               id="novel-search"
               value={query}
               autoFocus={true}
-              onChange={e => setQuery(e.target.value)}/>
+              onChange={e => setQuery(e.target.value)}
+              ClassName={styles.input}/>
             <button type="submit">Submit</button>
           </div>
         </form>
