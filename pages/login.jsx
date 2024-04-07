@@ -58,11 +58,11 @@ export default function Login(props){
             <link rel="icon" href="/favicon.png" />
         </Head>
         <Header  isLoggedIn={props.isLoggedIn}/>
-        <main>
+        <main className={styles.main}>
             <h1 className={styles.title}>Welcome! Please log in below</h1>
             <form className={styles.form} onSubmit={handleLogin}>
-                <label htmlFor="username">Username:</label>
-                <input type="text" name="username" id="username" onChange={handleChange} value={username} />
+                <label htmlFor="username" className={styles.label}>Username:</label>
+                <input type="text" name="username" id="username" className={styles.input} onChange={handleChange} value={username} />
                 <label httmlFor="password" >Password:</label>
                 <input type="password" name="password" id="password" onChange={handleChange} value={password} />
                 <button>Log In</button>
