@@ -6,7 +6,7 @@
     --accent-color: #551E3D;
 }
 
-a, Link {
+.Link {
     text-decoration: none;
     color: var(--book-color);
 }
@@ -51,17 +51,18 @@ p {
 
 main {
     background-color: var(--background-color);
-    height: 800px;
-    margin-top: 0%;
-    padding-top: 0%;
+        height: 1000px;
+        margin: 0;
+        padding: 0;
+        overflow: auto;
 }
 
-form-input {
+.input {
     background-color: var(--book-color);
     color: var(--primary-color);
 }
 
-form-labels {
+.label {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 18pt;
     color: var(--note-color);

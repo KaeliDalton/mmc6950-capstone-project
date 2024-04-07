@@ -72,7 +72,7 @@ export default function Create(props){
         </Head>
         <Header isLoggedIn={props.isLoggedIn} />
 
-        <main>
+        <main className={styles.main}>
             <h1 className={styles.title}>Create a note below:</h1>
 
             <form className={styles.form} onSubmit={handleNoteCreation} >
