@@ -33,7 +33,7 @@
     .Link {
         font-size: 14px;
     }
-    .container {
+    .nav {
         display: flex;
         flex-direction: column;
         column-count: 3;
@@ -45,7 +45,7 @@
     .Link {
         font-size: 12px;
     }
-    .container {
+    .nav {
         display: flex;
         flex-direction: column;
         column-count: 2;
