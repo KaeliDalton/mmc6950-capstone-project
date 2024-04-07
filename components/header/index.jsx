@@ -10,7 +10,7 @@ export default function Header(props){
             {/* <img src='/myreads.png'>
                 <Link href='/'>MyReads</Link>
             </img> */}
-             <Image src="/myreads.png" alt="MyReads Logo" width={72} height={16} className={styles.img}/>
+             <Image src="/myreads.png" alt="MyReads Logo" width={105} height={40} className={styles.img}/>
             <div className={styles.nav}>
                 {props.isLoggedIn ? (
                     <>
