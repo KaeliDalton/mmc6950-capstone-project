@@ -3,7 +3,7 @@
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 16pt;
     padding: 10px;
-    /* margin: 10px; */
+    margin: 10px;
 }
 
 .img{
@@ -19,7 +19,8 @@
     margin: 0px;
     position: relative;
     top: -20;
-    height: 80px;
+    height: 100px;
+    overflow: auto;
 }
 
 .nav {
