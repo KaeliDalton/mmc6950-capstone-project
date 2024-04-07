@@ -26,8 +26,8 @@ export default function Header(props){
                     <Link href='/signup' className={styles.Link}>Sign Up</Link>
                     {/* <Link href='/' className={styles.Link}>Home</Link>
                     <Link href='/books' className={styles.Link}>Your List</Link> */}
-                    {/* <Link href='/note' className={styles.Link}>Your Notes</Link>
-                    <Link href='/create' className={styles.Link}>Create Note</Link> */}
+                    {/* <Link href='/note' className={styles.Link}>Your Notes</Link> */}
+                    <Link href='/create' className={styles.Link}>Create Note</Link>
                     </>
                 )}
             </div>
