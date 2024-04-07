@@ -70,42 +70,45 @@ export default function Signup(props){
                 <link rel="icon" href='/favicon.png'/>
             </Head>
 
-            <Header isLoggedIn={props.isLoggedIn} />
+            <Header isLoggedIn={props.isLoggedIn} className={styles.container}/>
 
-            <main>
+            <main className={styles.main}>
                 <h1 className={styles.title}>Create an account:</h1>
                 <form onSubmit={handleAccountCreation}  className={styles.form}>
-                <label htmlFor="username">Username: </label>
+                <label htmlFor="username" className={styles.label}>Username: </label>
                 <input
                     type="text"
                     name="username"
                     id="username"
                     onChange={handleChange}
                     value={username}
+                    className={styles.input}
                  />
-                 <label htmlFor="password">Password: </label>
+                 <label htmlFor="password" className={styles.label}>Password: </label>
                 <input
                     type="password"
                     name="password"
                     id="password"
                     onChange={handleChange}
                     value={password}
+                    className={styles.input}
                  />
-                 <label htmlFor="confirm-password">Confirm Password: </label>
+                 <label htmlFor="confirm-password" className={styles.label}>Confirm Password: </label>
                 <input
                     type="password"
                     name="confirm-password"
                     id="confirm-password"
                     onChange={handleChange}
                     value={confirmPassword}
+                    className={styles.input}
                  />
                  <button>Create Account</button>
                  {error && <p>{error}</p>}
                 </form>
                 <p>
                 Do you want to
-                <Link href="/login">
-                    <p> Log In </p>
+                <Link href="/login"  className={styles.Link}>
+                     Log In
                 </Link>
                 instead?
                 </p>
