@@ -63,12 +63,17 @@ export default function Login(props){
             <form className={styles.form} onSubmit={handleLogin}>
                 <label htmlFor="username" className={styles.label}>Username:</label>
                 <input type="text" name="username" id="username" className={styles.input} onChange={handleChange} value={username} />
-                <label httmlFor="password" >Password:</label>
-                <input type="password" name="password" id="password" onChange={handleChange} value={password} />
+                <label httmlFor="password" className={styles.label}>Password:</label>
+                <input type="password" name="password" id="password" className={styles.input} onChange={handleChange} value={password} />
                 <button>Log In</button>
                 {error && <p>{error}</p>}
             </form>
+            <div>
+            <p>If you do not have an account,</p>
             <Link href="/signup">Sign Up</Link>
+            <p>here!</p>
+
+            </div>
         </main>
         <Footer />
         </>
