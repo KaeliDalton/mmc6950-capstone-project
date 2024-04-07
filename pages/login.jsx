@@ -54,7 +54,7 @@ export default function Login(props){
         <Head>
             <title>MyReads Log In Page</title>
             <meta name="description" content="MyReads Log In Page"/>
-            {/* <link rel="icon" href="/favicon.png" /> */}
+            <link rel="icon" href="/favicon.png" />
         </Head>
         <Header  isLoggedIn={props.isLoggedIn}/>
         <main>

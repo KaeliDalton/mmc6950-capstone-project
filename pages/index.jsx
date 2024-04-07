@@ -25,7 +25,7 @@ export default function Home() {
         <title>MyReads</title>
         <meta name="description" content="MyReads Homepage" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        {/* <link rel="icon" href="/favicon.png" /> */}
+        <link rel="icon" href="/favicon.png" />
       </Head>
       <Header isLoggedIn={props.isLoggedIn} username={props?.user?.username} />
       <main className={styles.main}>

@@ -38,7 +38,7 @@ export default function Favorites(props) {
       <Head>
         <title>MyReads Favorites</title>
         <meta name="description" content="Your favorite books on MyReads" />
-        {/* <link rel="icon" href="/favicon.png" /> */}
+        <link rel="icon" href="/favicon.png" />
       </Head>
 
       <main>

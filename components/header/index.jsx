@@ -1,5 +1,6 @@
 import Link from "next/link"
 import useLogout from '../../hooks/useLogout'
+import styles from './style.module.css'
 
 export default function Header(props){
     const logout = useLogout()
@@ -12,7 +13,7 @@ export default function Header(props){
                 {props.isLoggedIn ? (
                     <>
                     <Link href='/books'>Your List</Link>
-                    <Link href='/notes'>Your Notes</Link>
+                    <Link href='/note'>Your Notes</Link>
                     <Link href='/search'>Search</Link>
                     <a href="#" onClick={logout}>
                         Logout
@@ -23,6 +24,10 @@ export default function Header(props){
                     <Link href='/search'> Search</Link>
                     <Link href='/login'>Login</Link>
                     <Link href='/signup'>Sign Up</Link>
+                    <Link href='/'>Home</Link>
+                    <Link href='/books'>Your List</Link>
+                    <Link href='/note'>Your Notes</Link>
+                    <Link href='/create'>Create Note</Link>
                     </>
                 )}
             </div>
