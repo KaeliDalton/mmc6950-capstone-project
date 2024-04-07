@@ -6,6 +6,7 @@ import { useState } from "react";
 import {useRouter} from 'next/router';
 import Header from '../components/header'
 import styles from '../styles/signup.module.css'
+import Footer from '../components/footer';
 
 export const getServerSideProps = withIronSessionSsr(
     async function getServerSideProps({ req }){
