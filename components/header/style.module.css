@@ -17,7 +17,7 @@
     background-color: var(--book-color);
     padding: 0px;
     margin: 0px;
-    position: sticky;
+    position: relative;
     top: -20;
 }
 
