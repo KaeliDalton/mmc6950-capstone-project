@@ -1,6 +1,7 @@
 import Link from "next/link"
 import useLogout from '../../hooks/useLogout'
 import styles from './style.module.css'
+import Image from "next/image"
 
 export default function Header(props){
     const logout = useLogout()
