@@ -39,3 +39,8 @@
 .form > * {
     margin-bottom: 10px;
 }
+.Link {
+    color: var(--book-color);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 16pt;
+}

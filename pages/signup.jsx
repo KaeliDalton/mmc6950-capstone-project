@@ -106,13 +106,14 @@ export default function Signup(props){
                  {error && <p>{error}</p>}
                 </form>
                 <p>
-                Do you want to
+                Do you want to 
                 <Link href="/login"  className={styles.Link}>
-                     Log In
+                      Log In 
                 </Link>
-                instead?
+                 instead?
                 </p>
             </main>
+            <Footer />
         </>
     );
 }
