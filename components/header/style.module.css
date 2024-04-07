@@ -33,23 +33,11 @@
     .Link {
         font-size: 14px;
     }
-    .nav {
-        display: flex;
-        flex-direction: column;
-        column-count: 3;
-        column-width: 33%;
-    }
 }
 
 @media (max-width: 400px){
     .Link {
         font-size: 12px;
-    }
-    .nav {
-        display: flex;
-        flex-direction: column;
-        column-count: 2;
-        column-width: 50%;
     }
 }
 /* Need mobile responsive hamburger menu in same color */
