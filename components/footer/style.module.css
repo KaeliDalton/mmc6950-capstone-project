@@ -2,8 +2,10 @@
     color: var(--accent-color);
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 16pt;
-    background-color: var(--book-color);
     text-align: center;
+}
+.footer {
+    background-color: var(--book-color);
 }
 
 /* Need to scale down probably on mobile */
