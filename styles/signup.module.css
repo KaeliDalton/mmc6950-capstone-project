@@ -1,5 +1,6 @@
 .title{
     color: var(--note-color);
+    margin: 0;
 }
 
 .label{
