@@ -76,47 +76,52 @@ export default function Create(props){
             <h1 className={styles.title}>Create a note below:</h1>
 
             <form className={styles.form} onSubmit={handleNoteCreation} >
-                <label htmlFor="title">Title:</label>
+                <label htmlFor="title" className={styles.label}>Title:</label>
                 <input
                 type="text"
                 name="title"
                 id="title"
                 onChange={handleChange}
                 value={title}
+                className={styles.input}
                 />
-                <label htmlFor="author">Author:</label>
+                <label htmlFor="author" className={styles.label}>Author:</label>
                 <input
                  type="text"
                  name="author"
                  id="author"
                  onChange={handleChange}
                  value={author}
+                 className={styles.input}
                 />
-                <label htmlFor="dateStarted">Date Started:</label>
+                <label htmlFor="dateStarted" className={styles.label}>Date Started:</label>
                 <input
                  type="text"
                  name="dateStarted"
                  id="dateStarted"
                  onChange={handleChange}
                  value={dateStarted}
+                 className={styles.input}
                 />
-                <label htmlFor="dateFinished">Date Finished:</label>
+                <label htmlFor="dateFinished" className={styles.label}>Date Finished:</label>
                 <input
                  type="text"
                  name="dateFinished"
                  id="dateFinished"
                  onChange={handleChange}
                  value={dateFinished}
+                 className={styles.input}
                 />
-                <label htmlFor="noteBody">Notes:</label>
+                <label htmlFor="noteBody" className={styles.label}>Notes:</label>
                 <input
                  type="text"
                  name="noteBody"
                  id="noteBody"
                  onChange={handleChange}
                  value={noteBody}
+                 className={styles.input}
                 />
-                <button>Create</button>
+                <button>Create Note</button>
                 {error && <p>{error}</p>}
             </form>
         </main>

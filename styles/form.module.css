@@ -11,6 +11,17 @@
     font-size: 18px;
     
 }
+.title{
+   text-align: center;
+   margin: 0;
+}
+
+.label{
+    color: var(--note-color);
+    font-size: 16pt;
+    text-align: left;
+}
+
 
 .form {
     display: flex;

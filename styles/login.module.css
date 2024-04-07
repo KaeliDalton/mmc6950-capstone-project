@@ -31,7 +31,7 @@
 }
 
 .main {
-    height: 800px;
+    height: 1000px;
     margin: 0;
     padding: 0;
     overflow: auto;
@@ -53,4 +53,8 @@
 
 .signup {
     text-align: center;
+}
+
+@media (max-width:850) {
+    /* hamburger */
 }
