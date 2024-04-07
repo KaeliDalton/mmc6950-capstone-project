@@ -1,12 +1,14 @@
 .title{
     color: var(--note-color);
     text-align: center;
+    padding-top: 10 px;
 }
 
 .label{
     color: var(--note-color);
     font-size: 16pt;
     padding: 10px;
+    text-align: left;
 }
 
 .input {
@@ -20,7 +22,7 @@
     color: var(--note-color);
     font-size: 20pt;
     border: none;
-    padding: 20px;
+    padding: 30px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
