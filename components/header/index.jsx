@@ -5,11 +5,12 @@ import styles from './style.module.css'
 export default function Header(props){
     const logout = useLogout()
     return (
-        <header>
+        <header className={styles.container}>
             {/* <img src='/myreads.png'>
                 <Link href='/'>MyReads</Link>
             </img> */}
-            <div>
+             <Image src="/myreads.png" alt="MyReads Logo" width={72} height={16} className={styles.img}/>
+            <div className={styles.nav}>
                 {props.isLoggedIn ? (
                     <>
                     <Link href='/books'>Your List</Link>
