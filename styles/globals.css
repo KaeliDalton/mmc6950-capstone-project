@@ -6,7 +6,7 @@
     --accent-color: #551E3D;
 }
 
-.Link {
+Link, a {
     text-decoration: none;
     color: var(--book-color);
 }

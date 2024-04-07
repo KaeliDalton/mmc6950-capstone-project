@@ -33,6 +33,11 @@
     .Link {
         font-size: 14px;
     }
+    .container {
+        display: flex;
+        flex-direction: column;
+        column-width: 33%;
+    }
 }
 
 @media (max-width: 400px){
