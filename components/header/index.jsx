@@ -14,22 +14,22 @@ export default function Header(props){
             <div className={styles.nav}>
                 {props.isLoggedIn ? (
                     <>
-                    <Link href='/books'>Your List</Link>
-                    <Link href='/note'>Your Notes</Link>
-                    <Link href='/search'>Search</Link>
-                    <a href="#" onClick={logout}>
+                    <Link href='/books' className={styles.Link}>Your List</Link>
+                    <Link href='/note' className={styles.Link}>Your Notes</Link>
+                    <Link href='/search' className={styles.Link}>Search</Link>
+                    <a href="#" onClick={logout} className={styles.Link}>
                         Logout
                     </a>
                     </>
                 ) :(
                     <>
                     <Link href='/search' className={styles.Link}> Search</Link>
-                    <Link href='/login'>Login</Link>
-                    <Link href='/signup'>Sign Up</Link>
-                    <Link href='/'>Home</Link>
-                    <Link href='/books'>Your List</Link>
-                    <Link href='/note'>Your Notes</Link>
-                    <Link href='/create'>Create Note</Link>
+                    <Link href='/login' className={styles.Link}>Login</Link>
+                    <Link href='/signup' className={styles.Link}>Sign Up</Link>
+                    <Link href='/' className={styles.Link}>Home</Link>
+                    <Link href='/books' className={styles.Link}>Your List</Link>
+                    <Link href='/note' className={styles.Link}>Your Notes</Link>
+                    <Link href='/create' className={styles.Link}>Create Note</Link>
                     </>
                 )}
             </div>
