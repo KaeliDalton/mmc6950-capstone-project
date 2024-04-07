@@ -23,7 +23,7 @@ export default function Header(props){
                     </>
                 ) :(
                     <>
-                    <Link href='/search'> Search</Link>
+                    <Link href='/search' className={styles.Link}> Search</Link>
                     <Link href='/login'>Login</Link>
                     <Link href='/signup'>Sign Up</Link>
                     <Link href='/'>Home</Link>
