@@ -4,6 +4,7 @@
     font-size: 16pt;
     padding: 10px;
     margin: 10px;
+    text-decoration: none;
 }
 
 .img{
@@ -28,9 +29,15 @@
 }
 
 
-@media (max-width: 800px) {
-    .nav {
-        font-size: 14;
+@media (max-width: 850px) {
+    .Link {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 400px){
+    .Link {
+        font-size: 12px;
     }
 }
 /* Need mobile responsive hamburger menu in same color */
