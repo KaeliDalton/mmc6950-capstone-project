@@ -61,6 +61,11 @@
     text-align: center;
 }
 
-@media (max-width:850) {
-    /* hamburger */
+@media (max-width:800) {
+    .title {
+        font-size: 22px;
+    }
+    .signup {
+        font-size: 14px;
+    }
 }

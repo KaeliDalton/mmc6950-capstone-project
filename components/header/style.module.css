@@ -36,6 +36,7 @@
     .container {
         display: flex;
         flex-direction: column;
+        column-count: 3;
         column-width: 33%;
     }
 }
@@ -43,6 +44,12 @@
 @media (max-width: 400px){
     .Link {
         font-size: 12px;
+    }
+    .container {
+        display: flex;
+        flex-direction: column;
+        column-count: 2;
+        column-width: 33%;
     }
 }
 /* Need mobile responsive hamburger menu in same color */
