@@ -50,6 +50,10 @@
     align-items: center;
     padding-bottom: 10px;
 }
+.form > button:is(:hover, :focus, :active){
+    background-color: var(--note-color);
+    color: var(--primary-color);
+}
 
 .form > * {
     margin-bottom: 20px;

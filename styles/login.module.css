@@ -47,6 +47,10 @@
     flex-direction: column;
     align-items: center;
 }
+.form > button:is(:hover, :focus, :active){
+    background-color: var(--note-color);
+    color: var(--primary-color);
+}
 
 .form > * {
     margin-bottom: 10px;
@@ -59,15 +63,4 @@
 
 .signup {
     text-align: center;
-}
-
-@media (max-width:800) {
-    .title {
-        font-size: 22px;
-        color: blue;
-    }
-    .signup {
-        font-size: 14px;
-        color: blueviolet;
-    }
 }

@@ -107,6 +107,10 @@ main {
     p {
         font-size: 14pt;
     }
+
+    Link {
+        font-size: 14pt;
+    }
 }
 
 @media (max-width: 400px) {
@@ -133,6 +137,9 @@ main {
     }
     
     p {
+        font-size: 12pt;
+    }
+    Link {
         font-size: 12pt;
     }
 }
