@@ -1,9 +1,21 @@
 .title, .label, .form > button {
     color: var(--book-color);
 }
+.main {
+    height: 1000px;
+    margin: 0;
+    padding: 0;
+    overflow: auto;
+}
 
 .body{
     color: var(--note-color);
+}
+
+.blocks {
+    display: flex;
+    justify-content: space-between;
+    gap: 12 px;
 }
 
 .label{
@@ -46,10 +58,4 @@
 
 .image{
     width: 100px;
-}
-.main {
-    height: 1000px;
-    margin: 0;
-    padding: 0;
-    overflow: auto;
 }

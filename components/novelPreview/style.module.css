@@ -1,12 +1,8 @@
-h1, h2, h3, h4, button {
+.title {
     color: var(--book-color);
 }
 
-button{
-    background-color: var(--primary-color);
-}
-info-block, image{
+.block, .image{
     padding: auto;
     margin: 0, auto;
 }
-/* again, mobile and also how to group info into a block and display it properly when fixing other pages */

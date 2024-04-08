@@ -1,8 +1,31 @@
+.main {
+    height: 1000px;
+    margin: 0;
+    padding: 0;
+    overflow: auto;
+}
+
 .title{
     color: var(--note-color);
     text-align: center;
    margin: 0;
    padding-top: 20px;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.form > * {
+    margin-bottom: 10px;
+}
+
+.blocks {
+    display: flex;
+    justify-content: space-between;
+    gap: 12 px;
 }
 
 .label{
@@ -36,31 +59,28 @@
     border-radius: 12px;
 }
 
-.main {
-    height: 1000px;
-    margin: 0;
-    padding: 0;
-    overflow: auto;
-}
-.form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
 .form > button:is(:hover, :focus, :active){
     background-color: var(--note-color);
     color: var(--primary-color);
 }
 
-.form > * {
-    margin-bottom: 10px;
+.signup {
+    text-align: center;
 }
+
 .Link {
     color: var(--book-color);
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 16pt;
 }
+@media (max-width: 800px) {
+    .Link {
+        font-size: 14px;
+    }
+}
 
-.signup {
-    text-align: center;
+@media (max-width: 400px){
+    .Link {
+        font-size: 12px;
+    }
 }

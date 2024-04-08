@@ -6,10 +6,6 @@
     --accent-color: #551E3D;
 }
 
-Link, a {
-    text-decoration: none;
-    color: var(--book-color);
-}
 
 h1 {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -47,6 +43,11 @@ p {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 16pt;
     color: var(--note-color);
+}
+
+Link, a {
+    text-decoration: none;
+    color: var(--book-color);
 }
 
 main {

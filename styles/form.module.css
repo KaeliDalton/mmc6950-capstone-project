@@ -1,6 +1,37 @@
+.main {
+    height: 1000px;
+    margin: 0;
+    padding: 0;
+    overflow: auto;
+}
+
 .title, .label, .form > button{
     color: var(--note-color);
     padding: 10px;
+}
+
+.title{
+   text-align: center;
+   margin: 0;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 20px;
+}
+
+.blocks {
+    display: flex;
+    justify-content: space-between;
+    gap: 12 px;
+}
+
+.label{
+    color: var(--note-color);
+    font-size: 16pt;
+    text-align: left;
 }
 
 .input{
@@ -10,24 +41,6 @@
     border-radius: 12px;
     font-size: 18px;
     
-}
-.title{
-   text-align: center;
-   margin: 0;
-}
-
-.label{
-    color: var(--note-color);
-    font-size: 16pt;
-    text-align: left;
-}
-
-
-.form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding-bottom: 20px;
 }
 
 .form > * {
@@ -53,10 +66,4 @@
 .form > button:is(:hover, :focus, :active){
     background-color: var(--note-color);
     color: var(--primary-color);
-}
-.main {
-    height: 1000px;
-    margin: 0;
-    padding: 0;
-    overflow: auto;
 }

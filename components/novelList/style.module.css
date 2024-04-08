@@ -1,23 +1,6 @@
-/* column, header, header v info, ifno blocks */
-
-h1{
-    color: var(--book-color);
-}
-
-h2{
-    color: var(--book-color);
-}
-
-book-list{
+.list{
     display: flex;
     flex-direction: column;
     column-width: 50%;
     padding: 10px;
 }
-
-img{
-    width: 100px;
-}
-
-/* come fix this when you fix the search/notes display */
-/* don't forget mobile */

@@ -76,6 +76,7 @@ export default function Create(props){
             <h1 className={styles.title}>Create a note below:</h1>
 
             <form className={styles.form} onSubmit={handleNoteCreation} >
+            <div className={styles.blocks}>
                 <label htmlFor="title" className={styles.label}>Title:</label>
                 <input
                 type="text"
@@ -85,6 +86,8 @@ export default function Create(props){
                 value={title}
                 className={styles.input}
                 />
+                </div>
+                <div className={styles.blocks}>
                 <label htmlFor="author" className={styles.label}>Author:</label>
                 <input
                  type="text"
@@ -94,6 +97,8 @@ export default function Create(props){
                  value={author}
                  className={styles.input}
                 />
+                </div>
+                <div className={styles.blocks}>
                 <label htmlFor="dateStarted" className={styles.label}>Date Started:</label>
                 <input
                  type="text"
@@ -103,6 +108,8 @@ export default function Create(props){
                  value={dateStarted}
                  className={styles.input}
                 />
+                </div>
+                <div className={styles.blocks}>
                 <label htmlFor="dateFinished" className={styles.label}>Date Finished:</label>
                 <input
                  type="text"
@@ -112,6 +119,8 @@ export default function Create(props){
                  value={dateFinished}
                  className={styles.input}
                 />
+                </div>
+                <div className={styles.blocks}>
                 <label htmlFor="noteBody" className={styles.label}>Notes:</label>
                 <input
                  type="text"
@@ -121,6 +130,7 @@ export default function Create(props){
                  value={noteBody}
                  className={styles.input}
                 />
+                </div>
                 <button>Create Note</button>
                 {error && <p>{error}</p>}
             </form>

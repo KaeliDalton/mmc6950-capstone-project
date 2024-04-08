@@ -33,7 +33,7 @@
     margin-bottom: 20px;
 }
 
-.password {
+.blocks {
     display: flex;
     justify-content: space-between;
     gap: 12 px;
@@ -81,4 +81,15 @@
     color: var(--book-color);
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 16pt;
+}
+@media (max-width: 800px) {
+    .Link {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 400px){
+    .Link {
+        font-size: 12px;
+    }
 }

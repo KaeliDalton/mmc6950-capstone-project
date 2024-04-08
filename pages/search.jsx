@@ -59,6 +59,7 @@ export default function Search() {
       <main>
         <h1 className={styles.title}>MyReads Book Search</h1>
         <form onSubmit={handleSubmit} className={styles.form}>
+        <div className={styles.blocks}>
           <label className={styles.label} htmlFor="novel-search">Search by author, title, and/or keywords:</label>
           <div>
             <input
@@ -70,6 +71,7 @@ export default function Search() {
               onChange={e => setQuery(e.target.value)}
               ClassName={styles.input}/>
             <button type="submit">Search</button>
+          </div>
           </div>
         </form>
         {
