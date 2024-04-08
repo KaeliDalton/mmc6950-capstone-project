@@ -1,8 +1,42 @@
+.main {
+    height: 1000px;
+    margin: 0;
+    padding: 0;
+    overflow: auto;
+}
 .title{
     color: var(--note-color);
     margin: 0;
     text-align: center;
     padding-top: 20px;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    gap: 12 px;
+    background-color: var(--book-color);
+    padding: 0px;
+    margin: 0px;
+    position: relative;
+    top: -20;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 10px;
+}
+
+.form > * {
+    margin-bottom: 20px;
+}
+
+.password {
+    display: flex;
+    justify-content: space-between;
+    gap: 12 px;
 }
 
 .label{
@@ -33,42 +67,18 @@
     margin: 4px 2px;
     border-radius: 12px;
 }
-.container {
-    display: flex;
-    justify-content: space-between;
-    gap: 12 px;
-    background-color: var(--book-color);
-    padding: 0px;
-    margin: 0px;
-    position: relative;
-    top: -20;
-}
 
-.form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding-bottom: 10px;
-}
 .form > button:is(:hover, :focus, :active){
     background-color: var(--note-color);
     color: var(--primary-color);
 }
 
-.form > * {
-    margin-bottom: 20px;
+.login {
+    text-align: center;
 }
-.main {
-    height: 1000px;
-    margin: 0;
-    padding: 0;
-    overflow: auto;
-}
+
 .Link {
     color: var(--book-color);
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 16pt;
-}
-.login {
-    text-align: center;
 }

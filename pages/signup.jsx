@@ -94,6 +94,7 @@ export default function Signup(props){
                     value={password}
                     className={styles.input}
                  />
+                 <div className={styles.password}>
                  <label htmlFor="confirm-password" className={styles.label}>Confirm Password: </label>
                 <input
                     type="password"
@@ -103,6 +104,8 @@ export default function Signup(props){
                     value={confirmPassword}
                     className={styles.input}
                  />
+
+                 </div>
                  <button>Create Account</button>
                  {error && <p>{error}</p>}
                 </form>
