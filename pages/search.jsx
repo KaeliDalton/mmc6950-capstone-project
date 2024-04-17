@@ -58,7 +58,8 @@ export default function Search() {
       {/* <Header isLoggedIn={props.isLoggedIn} /> */}
       <main>
         <h1 className={styles.title}>MyReads Book Search</h1>
-        <form onSubmit={handleSubmit} className={styles.form}>
+        {/* <form onSubmit={handleSubmit} className={styles.form}> */}
+        <form className={styles.form}>
         <div className={styles.blocks}>
           <label className={styles.label} htmlFor="novel-search">Search by author, title, and/or keywords:</label>
           <div>
