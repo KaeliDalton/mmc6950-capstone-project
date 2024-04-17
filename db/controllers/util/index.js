@@ -15,7 +15,7 @@ export function normalizeId({_id, ...otherProperties}) {
     return { ...otherProperties, id }
   }
 
-export default async function dbConnect() {
+export async function dbConnect() {
   if (cached.conn) {
     return cached.conn
   }
