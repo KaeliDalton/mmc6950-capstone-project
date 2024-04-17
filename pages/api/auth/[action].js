@@ -48,7 +48,6 @@ async function signup(req, res){
             id: user.id
         }
         await req.session.save()
-        res.redirect('/')
     } catch(err){
         res.status(400).json({error: err.message})
     }
