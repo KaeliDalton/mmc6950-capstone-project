@@ -30,7 +30,7 @@ export default function Signup(props){
         username: "",
         password: "",
         "confirm-password": "",
-    })
+    });
     const [error, setError] = useState("")
 
     function handleChange(e){
