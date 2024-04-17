@@ -19,7 +19,7 @@ export const getServerSideProps = withIronSessionSsr(
   sessionOptions
 )
 
-export default function Home() {
+export default function Home(props) {
   return (
     <>
       <Head>
