@@ -55,7 +55,7 @@ export default function Search() {
         <meta name="description" content="MyReads Search Page" />
         <link rel="icon" href="/favicon.png" />
       </Head>
-      <Header isLoggedIn={props.isLoggedIn} />
+      {/* <Header isLoggedIn={props.isLoggedIn} /> */}
       <main>
         <h1 className={styles.title}>MyReads Book Search</h1>
         <form onSubmit={handleSubmit} className={styles.form}>
