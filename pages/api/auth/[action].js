@@ -1,6 +1,7 @@
 import {withIronSessionApiRoute} from 'iron-session/next'
 import sessionOptions from '../../../config/session'
 import db from '../../../db'
+import { use } from 'react'
 
 export default withIronSessionApiRoute(
     function handler(req, res){
@@ -23,11 +24,11 @@ export default withIronSessionApiRoute(
 async function login(req, res){
     const { username, password } = req.body
     try{
-        const {
-            password: _,
-            ...otherFields
-        } = await db.auth.login(username,password)
-        req.session.user = otherFields
+        const user = await db.auth.login(username,password)
+        req.session.user = {
+            username: user.username,
+            id: user.id
+        }
         await req.session.save()
         res.status(200).end()
     } catch(err){
@@ -41,11 +42,11 @@ async function logout(req, res){
 async function signup(req, res){
     try{
         const {username, password} = req.body
-        const {
-            password: _,
-            ...otherFields
-        } = await db.user.create(username, password)
-        req.session.user = otherFields
+        const user = await db.user.create(username, password)
+        req.session.user = {
+            username: user.username,
+            id: user.id
+        }
         await req.session.save()
         res.redirect('/')
     } catch(err){
