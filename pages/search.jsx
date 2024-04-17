@@ -9,20 +9,20 @@ import {withIronSessionSsr} from 'iron-session/next'
 import styles from '../styles/search.module.css'
 import Footer from "../components/footer";
 
-// export const getServerSideProps = withIronSessionSsr(
-//   async function getServerSideProps({req}) {
-//     const {user} = req.session
-//     const props = {}
-//     if (user){
-//       props.user = req.session.user
-//     }
-//     props.isLoggedIn = !!user
-//     return { props }
-//   },
-//   sessionOptions
-// )
+export const getServerSideProps = withIronSessionSsr(
+  async function getServerSideProps({req}) {
+    const {user} = req.session
+    const props = {}
+    if (user){
+      props.user = req.session.user
+    }
+    props.isLoggedIn = !!user
+    return { props }
+  },
+  sessionOptions
+)
 
-export default function Search() {
+export default function Search(props) {
   const [{novelSearchResults}, dispatch] = useReadContext()
   const [query, setQuery] = useState("")
   const [previousQuery, setPreviousQuery] = useState()
@@ -55,7 +55,7 @@ export default function Search() {
         <meta name="description" content="MyReads Search Page" />
         <link rel="icon" href="/favicon.png" />
       </Head>
-      {/* <Header isLoggedIn={props.isLoggedIn} /> */}
+      <Header isLoggedIn={props.isLoggedIn} />
       <main>
         <h1 className={styles.title}>MyReads Book Search</h1>
         <form onSubmit={handleSubmit} className={styles.form}>
