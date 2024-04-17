@@ -10,6 +10,13 @@ if (!cached) {
   cached = global.mongoose = { conn: null, promise: null }
 }
 
+export function normalizeId({_id, ...otherProperties}) {
+    const id = _id.toString()
+    return { ...otherProperties, id }
+  }
+  
+
+
 export default async function dbConnect() {
   if (cached.conn) {
     return cached.conn
@@ -34,10 +41,3 @@ export default async function dbConnect() {
 
   return cached.conn
 }
-
-export function normalizeId({_id, ...otherProperties}) {
-    const id = _id.toString()
-    return { ...otherProperties, id }
-  }
-  
-  export { dbConnect } from './connection'
