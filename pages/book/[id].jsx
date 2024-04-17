@@ -29,10 +29,10 @@ export const getServerSideProps = withIronSessionSsr(
 function NovelInfo({
   title,
   author,
-  imageLink,
+  image,
   description,
   isRead,
-  pubYear,
+  year,
 }) {
   return (
     <>
@@ -44,10 +44,10 @@ function NovelInfo({
             <h2>By: {author.join(", ").replace(/, ([^,]*)$/, ', and $1')}</h2>
           }
         </div>
-          <img src={imageLink}/>
+          <img src={image}/>
       </div>
       <p>Description:<br/>{description}</p>
-      <p>Published: {pubYear}</p>
+      <p>Published: {year}</p>
     </>
   )
 }
