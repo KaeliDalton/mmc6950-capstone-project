@@ -6,6 +6,7 @@ import db from "../db";
 import NovelList from "../components/novelList";
 import Link from 'next/link'
 import Footer from "../components/footer";
+import Header from "../components/header";
 
 export const getServerSideProps = withIronSessionSsr(
   async function getServerSideProps({ req }) {
@@ -41,6 +42,7 @@ export default function Favorites(props) {
         <meta name="description" content="Your favorite books on MyReads" />
         <link rel="icon" href="/favicon.png" />
       </Head>
+      <Header isLoggedIn={props.isLoggedIn} />
 
       <main>
         <h1>Favorite Books</h1>
