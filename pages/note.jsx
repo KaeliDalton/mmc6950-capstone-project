@@ -5,6 +5,7 @@ import sessionOptions from "../config/session";
 import db from "../db";
 import NoteList from "../components/noteList";
 import Footer from "../components/footer";
+import Header from "../components/header";
 
 export const getServerSideProps = withIronSessionSsr(
   async function getServerSideProps({ req }) {
@@ -16,7 +17,7 @@ export const getServerSideProps = withIronSessionSsr(
       req.session.destroy()
       return {
         redirect: {
-          destination: '/',
+          destination: '/login',
           permanent: false
         }
       }
@@ -40,10 +41,11 @@ export default function Notes(props) {
         <meta name="description" content="Your notes on MyReads" />
         <link rel="icon" href="/favicon.png" />
       </Head>
+      <Header isLoggedIn={props.isLoggedIn} />
 
       <main>
         <h1>Your Notes</h1>
-      {props.notes.length > 0 ? <NoteList notes={props.notes} /> : <p> No Notes Found.</p>}
+      {/* {props.notes.length > 0 ? <NoteList notes={props.notes} /> : <p> No Notes Found.</p>} */}
       </main>
       <Footer />
     </>
