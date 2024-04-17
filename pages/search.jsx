@@ -23,30 +23,30 @@ import Footer from "../components/footer";
 // )
 
 export default function Search() {
-  // const [{novelSearchResults}, dispatch] = useReadContext()
-  // const [query, setQuery] = useState("")
-  // const [previousQuery, setPreviousQuery] = useState()
-  // const inputRef = useRef()
+  const [{novelSearchResults}, dispatch] = useReadContext()
+  const [query, setQuery] = useState("")
+  const [previousQuery, setPreviousQuery] = useState()
+  const inputRef = useRef()
 
-  // async function handleSubmit(e) {
-  //   e.preventDefault()
-  //   if ( !query.trim() || query === previousQuery) return
-  //   setPreviousQuery(query)
-  //   const res = await fetch(
-  //     `https://www.googleapis.com/books/v1/volumes?langRestrict=en&q=${query}&maxResults=8`
-  //   )
-  //   if (res.status !== 200) return
-  //   const data = await res.json()
-  //   dispatch({
-  //     action: actions.SEARCH_NOVELS,
-  //     payload: data?.items
-  //     ?.map(({id, volumeInfo}) => ({
-  //       ...volumeInfo,
-  //       googleId: id,
-  //       image: volumeInfo?.imageLinks?.thumbnail
-  //     }))
-  //   })
-  // }
+  async function handleSubmit(e) {
+    e.preventDefault()
+    if ( !query.trim() || query === previousQuery) return
+    setPreviousQuery(query)
+    const res = await fetch(
+      `https://www.googleapis.com/books/v1/volumes?langRestrict=en&q=${query}&maxResults=8`
+    )
+    if (res.status !== 200) return
+    const data = await res.json()
+    dispatch({
+      action: actions.SEARCH_NOVELS,
+      payload: data?.items
+      ?.map(({id, volumeInfo}) => ({
+        ...volumeInfo,
+        googleId: id,
+        image: volumeInfo?.imageLinks?.thumbnail
+      }))
+    })
+  }
 
   return (
     <>
@@ -58,7 +58,7 @@ export default function Search() {
       {/* <Header isLoggedIn={props.isLoggedIn} /> */}
       <main>
         <h1 className={styles.title}>MyReads Book Search</h1>
-        {/* <form onSubmit={handleSubmit} className={styles.form}>
+        <form onSubmit={handleSubmit} className={styles.form}>
         <div className={styles.blocks}>
           <label className={styles.label} htmlFor="novel-search">Search by author, title, and/or keywords:</label>
           <div>
@@ -73,7 +73,7 @@ export default function Search() {
             <button type="submit">Search</button>
           </div>
           </div>
-        </form> */}
+        </form>
         {/* {
            novelSearchResults?.length
            ? <NovelList books={novelSearchResults} className={styles.results}/>
