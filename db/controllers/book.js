@@ -1,25 +1,25 @@
 
 import User from '../models/user'
-import { normalizeId, dbConnect } from './util'
+import * as databaseActions from './util'
 
 export async function getAll(userId) {
-  await dbConnect()
+  await databaseActions.dbConnect()
   const user = await User.findById(userId).lean()
   if (!user) return null
-  return user.readBooks.map(book => normalizeId(book))
+  return user.readBooks.map(book => databaseActions.normalizeId(book))
 }
 
 export async function getByGoogleId(userId, bookId) {
-  await dbConnect()
+  await databaseActions.dbConnect()
   const user = await User.findById(userId).lean()
   if (!user) return null
   const book = user.readBooks.find(book => book.googleId === bookId)
-  if (book) return normalizeId(book)
+  if (book) return databaseActions.normalizeId(book)
   return null
 }
 
 export async function add(userId, book) {
-  await dbConnect()
+  await databaseActions.dbConnect()
   const user = await User.findByIdAndUpdate(
     userId,
     { $addToSet: { readBooks: book } },
@@ -27,5 +27,5 @@ export async function add(userId, book) {
   )
   if (!user) return null
   const listedBook = user.readBooks.find(bk => bk.googleId === book.googleId)
-  return normalizeId(listedBook)
+  return databaseActions.normalizeId(listedBook)
 }

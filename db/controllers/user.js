@@ -1,15 +1,15 @@
 import User from '../models/user'
-import { normalizeId, dbConnect } from './util'
+import * as databaseActions from './util'
 
 export async function create(username, password){
     if(!(username && password))
         throw new Error('Must include username and password')
-    await dbConnect()
+    await databaseActions.dbConnect()
 
     const user = await User.create({username, password})
 
     if (!user)
         throw new Error ('Error creating user')
     
-        return normalizeId(user)
+        return databaseActions.normalizeId(user)
 }

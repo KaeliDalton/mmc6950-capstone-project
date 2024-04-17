@@ -1,11 +1,11 @@
 import Note from '../models/note'
 import User from '../models/user'
-import { normalizeId, dbConnect} from './util'
+import * as databaseActions from './util'
 
 export async function create(title, author, dateStarted, dateFinished, noteBody, userId){
     if(!(title && author && noteBody))
         throw new Error('Must include title, author and note content')
-    await dbConnect()
+    await databaseActions.dbConnect()
 
     const note = await Note.create({title, author, dateStarted, dateFinished, noteBody})
 
