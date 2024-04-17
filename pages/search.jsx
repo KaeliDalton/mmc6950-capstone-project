@@ -23,30 +23,30 @@ export const getServerSideProps = withIronSessionSsr(
 )
 
 export default function Search() {
-  const [{novelSearchResults}, dispatch] = useReadContext()
-  const [query, setQuery] = useState("")
-  const [previousQuery, setPreviousQuery] = useState()
-  const inputRef = useRef()
+  // const [{novelSearchResults}, dispatch] = useReadContext()
+  // const [query, setQuery] = useState("")
+  // const [previousQuery, setPreviousQuery] = useState()
+  // const inputRef = useRef()
 
-  async function handleSubmit(e) {
-    e.preventDefault()
-    if ( !query.trim() || query === previousQuery) return
-    setPreviousQuery(query)
-    const res = await fetch(
-      `https://www.googleapis.com/books/v1/volumes?langRestrict=en&q=${query}&maxResults=8`
-    )
-    if (res.status !== 200) return
-    const data = await res.json()
-    dispatch({
-      action: actions.SEARCH_NOVELS,
-      payload: data?.items
-      ?.map(({id, volumeInfo}) => ({
-        ...volumeInfo,
-        googleId: id,
-        image: volumeInfo?.imageLinks?.thumbnail
-      }))
-    })
-  }
+  // async function handleSubmit(e) {
+  //   e.preventDefault()
+  //   if ( !query.trim() || query === previousQuery) return
+  //   setPreviousQuery(query)
+  //   const res = await fetch(
+  //     `https://www.googleapis.com/books/v1/volumes?langRestrict=en&q=${query}&maxResults=8`
+  //   )
+  //   if (res.status !== 200) return
+  //   const data = await res.json()
+  //   dispatch({
+  //     action: actions.SEARCH_NOVELS,
+  //     payload: data?.items
+  //     ?.map(({id, volumeInfo}) => ({
+  //       ...volumeInfo,
+  //       googleId: id,
+  //       image: volumeInfo?.imageLinks?.thumbnail
+  //     }))
+  //   })
+  // }
 
   return (
     <>
