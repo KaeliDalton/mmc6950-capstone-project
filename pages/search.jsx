@@ -74,32 +74,32 @@ export default function Search() {
           </div>
           </div>
         </form>
-        {
+        {/* {
            novelSearchResults?.length
            ? <NovelList books={novelSearchResults} className={styles.results}/>
            : <NoResults {...{inputRef, previousQuery}} clearSearch={() => setQuery("")} />
-        }
+        } */}
       </main>
       <Footer/>
     </>
   )
 }
 
-function NoResults({inputRef, previousQuery, clearSearch}){
-  function handleSearch(){
-    inputRef.current.focus()
-    if (previousQuery) clearSearch()
-  }
-return (
-  <div>
-    <p>{previousQuery ? `No Results for "${previousQuery}"` : "No Results"}</p>
-    <button onClick={handleSearch}>
-      {
-        previousQuery
-        ? `Try another search?`
-        : `Enter a term to search`
-      }
-    </button>
-  </div>
-)
-}
+// function NoResults({inputRef, previousQuery, clearSearch}){
+//   function handleSearch(){
+//     inputRef.current.focus()
+//     if (previousQuery) clearSearch()
+//   }
+// return (
+//   <div>
+//     <p>{previousQuery ? `No Results for "${previousQuery}"` : "No Results"}</p>
+//     <button onClick={handleSearch}>
+//       {
+//         previousQuery
+//         ? `Try another search?`
+//         : `Enter a term to search`
+//       }
+//     </button>
+//   </div>
+// )
+// }
