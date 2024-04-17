@@ -9,18 +9,18 @@ import {withIronSessionSsr} from 'iron-session/next'
 import styles from '../styles/search.module.css'
 import Footer from "../components/footer";
 
-export const getServerSideProps = withIronSessionSsr(
-  async function getServerSideProps({req}) {
-    const {user} = req.session
-    const props = {}
-    if (user){
-      props.user = req.session.user
-    }
-    props.isLoggedIn = !!user
-    return { props }
-  },
-  sessionOptions
-)
+// export const getServerSideProps = withIronSessionSsr(
+//   async function getServerSideProps({req}) {
+//     const {user} = req.session
+//     const props = {}
+//     if (user){
+//       props.user = req.session.user
+//     }
+//     props.isLoggedIn = !!user
+//     return { props }
+//   },
+//   sessionOptions
+// )
 
 export default function Search() {
   // const [{novelSearchResults}, dispatch] = useReadContext()
