@@ -33,7 +33,7 @@ import Header from "../components/header";
 //   sessionOptions
 // );
 
-export default function Notes(props) {
+export default function Notes() {
   return (
     <>
       <Head>
