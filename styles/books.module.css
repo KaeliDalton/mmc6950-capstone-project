@@ -1,0 +1,13 @@
+.title {
+    color: var(--book-color);
+}
+.main {
+    height: 1000px;
+    margin: 0;
+    padding: 0;
+    overflow: auto;
+}
+
+.body{
+    color: var(--book-color);
+}

@@ -37,15 +37,19 @@ export default function Home(props) {
         <p>or</p>
         <Link href="/signup" className={styles.Link}>Sign Up</Link>
 
-        <br/>
+       <div>
 
         <p>If you have already logged in, try
-        <Link href='/search' className={styles.Link}> Searching </Link>
-        <br />
+        <br/>
+        <br/>
+        <Link href='/search' className={styles.Link}> Searching, </Link>
+        <br/>
+        <br/>
         <Link href='/books' className={styles.Link}> Viewing your read list, </Link>
         <p>or</p>
         <Link href='/create' className={styles.Link}> Creating a note! </Link>
         </p>
+        </div>
         </div>
       </main>
       <Footer />

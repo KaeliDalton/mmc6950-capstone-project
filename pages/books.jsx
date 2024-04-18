@@ -7,6 +7,7 @@ import NovelList from "../components/novelList";
 import Link from 'next/link'
 import Footer from "../components/footer";
 import Header from "../components/header";
+import styles from '../styles/books.module.css'
 
 export const getServerSideProps = withIronSessionSsr(
   async function getServerSideProps({ req }) {
@@ -44,8 +45,8 @@ export default function Favorites(props) {
       </Head>
       <Header isLoggedIn={props.isLoggedIn} />
 
-      <main>
-        <h1>Favorite Books</h1>
+      <main className={styles.main}>
+        <h1 className={styles.title}>Favorite Books</h1>
         {props.readBooks.length > 0 ? <NovelList books={props.readBooks} /> : <NoNovelsFound />}
       </main>
       <Footer />
