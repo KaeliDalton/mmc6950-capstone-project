@@ -70,7 +70,7 @@ export default function Search(props) {
               autoFocus={true}
               onChange={e => setQuery(e.target.value)}
               ClassName={styles.input}/>
-            <button type="submit">Search</button>
+            <button type="submit" className={styles.button}>Search</button>
           </div>
           </div>
         </form>
@@ -91,9 +91,9 @@ function NoResults({inputRef, previousQuery, clearSearch}){
     if (previousQuery) clearSearch()
   }
 return (
-  <div>
+  <div className={styles.blocks}>
     <p>{previousQuery ? `No Results for "${previousQuery}"` : "No Results"}</p>
-    <button onClick={handleSearch}>
+    <button onClick={handleSearch} className={styles.button}>
       {
         previousQuery
         ? `Try another search?`

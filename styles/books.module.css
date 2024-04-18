@@ -9,5 +9,9 @@
 }
 
 .body{
-    color: var(--book-color);
+    color: var(--note-color);
+}
+
+.image{
+    width: 100px;
 }
