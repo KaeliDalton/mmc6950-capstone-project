@@ -31,7 +31,7 @@ export default function Home(props) {
       <Header isLoggedIn={props.isLoggedIn} username={props?.user?.username} />
       <main className={styles.main}>
         <h1 className={styles.title}>MyReads Home</h1>
-        <p>With MyReads you can search for books, add them to your read list, write notes, and view your notes.</p>
+        <p className={styles.body}>With MyReads you can search for books, add them to your read list, write notes, and view your notes.</p>
         <div className={styles.options}>
         <Link href="/login" className={styles.Link}>Login</Link>
         <p>or</p>
@@ -40,9 +40,10 @@ export default function Home(props) {
         <br/>
 
         <p>If you have already logged in, try
-        <Link href='/search' className={styles.Link}> Searching, </Link>
+        <Link href='/search' className={styles.Link}> Searching </Link>
+        <br />
         <Link href='/books' className={styles.Link}> Viewing your read list, </Link>
-        or
+        <p>or</p>
         <Link href='/create' className={styles.Link}> Creating a note! </Link>
         </p>
         </div>
