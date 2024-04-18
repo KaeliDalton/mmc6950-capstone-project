@@ -15,7 +15,6 @@
 
 .blocks {
     display: flex;
-    justify-content: space-between;
     gap: 12 px;
     margin: 10px;
     text-align: center;

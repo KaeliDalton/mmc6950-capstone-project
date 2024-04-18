@@ -1,0 +1,22 @@
+title {
+    color: var(--book-color);
+}
+
+main {
+    text-align: center;
+}
+
+button {
+        cursor: pointer;
+        transition: 0.15s ease;
+        background-color: var(--primary-color);
+        color: var(--book-color);
+        font-size: 20pt;
+        border: none;
+        padding: 20px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        margin: 4px 2px;
+        border-radius: 12px;
+}

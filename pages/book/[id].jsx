@@ -8,6 +8,7 @@ import { useReadContext } from "../../context/read"
 import db from '../../db'
 import Header from '../../components/header';
 import Footer from '../../components/footer';
+import styles from '../../styles/info.module.css'
 
 
 export const getServerSideProps = withIronSessionSsr(
@@ -38,7 +39,7 @@ function NovelInfo({
     <>
       <div>
         <div>
-          <h1>{title}{isRead}</h1>
+          <h1 className={styles.title}>{title}{isRead}</h1>
           {
             author && author.length > 0 &&
             <h2>By: {author.join(", ").replace(/, ([^,]*)$/, ', and $1')}</h2>
@@ -95,11 +96,11 @@ export default function FindBook(props) {
 
       {
         book &&
-        <main>
+        <main className={styles.main}>
           <NovelInfo isReadBook={isRead} {...book}/>
           <div>
             {
-              <button onClick={markRead}>
+              <button onClick={markRead} className={styles.button}>
                   Mark as Read
                 </button>
             }
