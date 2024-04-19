@@ -40,15 +40,16 @@ function NovelInfo({
       <div>
         <div>
           <h1 className={styles.title}>{title}{isRead}</h1>
-          {
+          {/* {
             author && author.length > 0 &&
             <h2>By: {author.join(", ").replace(/, ([^,]*)$/, ', and $1')}</h2>
-          }
+          } */}
+           <h2>By: {author.join(", ").replace(/, ([^,]*)$/, ', and $1')}</h2>
         </div>
           <img src={image}/>
       </div>
       <p>Description:<br/>{description}</p>
-      <p>Published: {year}</p>
+      {/* <p>Published: {year}</p> */}
     </>
   )
 }
