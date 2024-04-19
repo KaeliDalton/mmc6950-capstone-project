@@ -1,12 +1,12 @@
-title {
+.title {
     color: var(--book-color);
 }
 
-main {
+.main {
     text-align: center;
 }
 
-button {
+.button {
         cursor: pointer;
         transition: 0.15s ease;
         background-color: var(--primary-color);
