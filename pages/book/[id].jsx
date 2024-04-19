@@ -29,7 +29,7 @@ export const getServerSideProps = withIronSessionSsr(
 
 function NovelInfo({
   title,
-  author,
+  authors,
   image,
   description,
   isRead,
@@ -40,11 +40,10 @@ function NovelInfo({
       <div>
         <div>
           <h1 className={styles.title}>{title}{isRead}</h1>
-          {/* {
-            author && author.length > 0 &&
-            <h2>By: {author.join(", ").replace(/, ([^,]*)$/, ', and $1')}</h2>
-          } */}
-           <h2>By: {author.join(", ").replace(/, ([^,]*)$/, ', and $1')}</h2>
+          {
+            authors && authors.length > 0 &&
+            <h2 className={styles.title}>By: {authors.join(", ").replace(/, ([^,]*)$/, ', and $1')}</h2>
+          }
         </div>
           <img src={image}/>
       </div>
