@@ -38,6 +38,7 @@ function NovelInfo({
 }) {
   return (
     <>
+     <html lang="en">
       <div>
         <div>
           <h1 className={styles.title}>{title}{isRead}</h1>
@@ -46,7 +47,7 @@ function NovelInfo({
             <h2 className={styles.title}>By: {authors.join(", ").replace(/, ([^,]*)$/, ', and $1')}</h2>
           }
         </div>
-        <Image
+        <img
             src={image}
             width={102}
             height={182}
@@ -55,6 +56,7 @@ function NovelInfo({
       </div>
       <p>Description:<br/>{description}</p>
       {/* <p>Published: {year}</p> */}
+    </html>
     </>
   )
 }

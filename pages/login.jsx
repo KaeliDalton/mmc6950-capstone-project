@@ -52,6 +52,7 @@ export default function Login(props){
     }
     return (
         <>
+        <html lang="en">
         <Head>
             <title>MyReads Log In Page</title>
             <meta name="description" content="MyReads Log In Page"/>
@@ -80,6 +81,7 @@ export default function Login(props){
             </div>
         </main>
         <Footer />
+        </html>
         </>
     )
 }

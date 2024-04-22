@@ -8,10 +8,10 @@ export default function NovelPreview({
 }) {
     return (
         <div>
-            <Image
+            <img
             src={image ? image : "/placeholder.jpg"}
-            width={102}
-            height={182}
+            width={256}
+            height={455}
             alt={title}
             className={styles.image}
             />

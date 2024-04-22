@@ -65,6 +65,7 @@ export default function Signup(props){
     }
     return (
         <>
+             <html lang="en">
             <Head>
                 <title>MyReads Sign Up</title>
                 <meta name='description' content='Create an account for MyReads' />
@@ -122,6 +123,7 @@ export default function Signup(props){
                 </div>
             </main>
             <Footer />
+        </html>
         </>
     );
 }

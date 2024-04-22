@@ -38,6 +38,7 @@ export const getServerSideProps = withIronSessionSsr(
 export default function Favorites(props) {
   return (
     <>
+     <html lang="en">
       <Head>
         <title>MyReads Favorites</title>
         <meta name="description" content="Your favorite books on MyReads" />
@@ -50,6 +51,7 @@ export default function Favorites(props) {
         {props.readBooks.length > 0 ? <NovelList books={props.readBooks} /> : <NoNovelsFound />}
       </main>
       <Footer />
+    </html>
     </>
   );
 }

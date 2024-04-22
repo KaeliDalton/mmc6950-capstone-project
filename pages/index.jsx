@@ -22,6 +22,7 @@ export const getServerSideProps = withIronSessionSsr(
 export default function Home(props) {
   return (
     <>
+     <html lang="en">
       <Head>
         <title>MyReads</title>
         <meta name="description" content="MyReads Homepage" />
@@ -53,6 +54,7 @@ export default function Home(props) {
         </div>
       </main>
       <Footer />
+    </html>
     </>
   );
 }

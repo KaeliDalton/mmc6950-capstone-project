@@ -65,6 +65,7 @@ export default function Create(props){
     }
     return (
         <>
+         <html lang="en">
         <Head>
             <title>MyReads Note Creation</title>
             <meta name="description" content="Create a note in your MyReads account" />
@@ -136,6 +137,7 @@ export default function Create(props){
             </form>
         </main>
         <Footer />
+        </html>
         </>
     )
 }

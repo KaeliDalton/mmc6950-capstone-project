@@ -50,6 +50,7 @@ export default function Search(props) {
 
   return (
     <>
+     <html lang="en">
       <Head>
         <title>MyReads Search</title>
         <meta name="description" content="MyReads Search Page" />
@@ -81,6 +82,7 @@ export default function Search(props) {
         }
       </main>
       <Footer/>
+    </html>
     </>
   )
 }
