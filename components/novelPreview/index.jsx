@@ -7,7 +7,7 @@ export default function NovelPreview({
     image,
 }) {
     return (
-        <div>
+        <div className={styles.list}>
             <img
             src={image ? image : "/placeholder.jpg"}
             width={256}

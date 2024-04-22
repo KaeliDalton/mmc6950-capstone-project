@@ -6,3 +6,9 @@
     padding: auto;
     margin: 0, auto;
 }
+.list {
+    display: flex;
+    gap: 12 px;
+    margin: 10px;
+    text-align: center;
+}
