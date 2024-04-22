@@ -1,4 +1,6 @@
 import styles from './style.module.css'
+import Image from 'next/image'
+
 export default function NovelPreview({
     title,
     authors,
@@ -6,8 +8,10 @@ export default function NovelPreview({
 }) {
     return (
         <div>
-            <img
-            src={image ? image : "https://images.unsplash.com/photo-1543497415-75c0a27177c0?q=80&w=2454&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"}
+            <Image
+            src={image ? image : "/placeholder.jpg"}
+            width={102}
+            height={182}
             alt={title}
             className={styles.image}
             />

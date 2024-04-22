@@ -21,6 +21,7 @@ export const getServerSideProps = withIronSessionSsr(
 export default function Favorites(props) {
     return (
       <>
+        <html lang="en">
         <Head>
           <title>MyReads Notes</title>
           <meta name="description" content="Your favorite books on MyReads" />
@@ -33,6 +34,7 @@ export default function Favorites(props) {
          <p>See Your Notes Here!</p>
         </main>
         <Footer />
+        </html>
       </>
     );
   }

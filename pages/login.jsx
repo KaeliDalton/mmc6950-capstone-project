@@ -66,7 +66,7 @@ export default function Login(props){
                 <input type="text" name="username" id="username" className={styles.input} onChange={handleChange} value={username} />
                 </div>
                 <div className={styles.blocks}>
-                <label httmlFor="password" className={styles.label}>Password:</label>
+                <label htmlFor="password" className={styles.label}>Password: </label>
                 <input type="password" name="password" id="password" className={styles.input} onChange={handleChange} value={password} />
                </div>
                 <button>Log In</button>
