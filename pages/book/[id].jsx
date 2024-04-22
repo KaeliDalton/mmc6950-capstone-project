@@ -46,7 +46,7 @@ function NovelInfo({
             <h2 className={styles.title}>By: {authors.join(", ").replace(/, ([^,]*)$/, ', and $1')}</h2>
           }
         </div>
-          <img src={image}/>
+          <img src={image} alt={title} className={styles.description}/>
       </div>
       <p>Description:<br/>{description}</p>
       {/* <p>Published: {year}</p> */}
