@@ -9,7 +9,6 @@ import db from '../../db'
 import Header from '../../components/header';
 import Footer from '../../components/footer';
 import styles from '../../styles/info.module.css'
-import Image from 'next/image';
 
 
 export const getServerSideProps = withIronSessionSsr(
@@ -38,7 +37,7 @@ function NovelInfo({
 }) {
   return (
     <>
-     <html lang="en">
+    <html lang='en'>
       <div>
         <div>
           <h1 className={styles.title}>{title}{isRead}</h1>
@@ -47,12 +46,7 @@ function NovelInfo({
             <h2 className={styles.title}>By: {authors.join(", ").replace(/, ([^,]*)$/, ', and $1')}</h2>
           }
         </div>
-        <img
-            src={image}
-            width={102}
-            height={182}
-            alt={title}
-            />
+          <img src={image}/>
       </div>
       <p>Description:<br/>{description}</p>
       {/* <p>Published: {year}</p> */}

@@ -1,6 +1,7 @@
 .title, .label, .form > button {
     color: var(--book-color);
     text-align: center;
+    padding: 10px;
 }
 .main {
     height: 1000px;
@@ -59,9 +60,9 @@
     column-width: 33%;
 }
 
-.image{
+/* .image{
     width: 100px;
-}
+} */
 
 .button {
     cursor: pointer;

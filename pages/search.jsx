@@ -96,6 +96,7 @@ return (
   <div className={styles.blocks}>
     <p className={styles.label}>{previousQuery ? `No Results for "${previousQuery}"` : "No Results"}</p>
     <br/>
+    <br/>
     <button onClick={handleSearch} className={styles.button}>
       {
         previousQuery
