@@ -28,7 +28,7 @@
 .bar{
     background-color: var(--note-color);
     color: var(--primary-color);
-    padding: 10px;
+    padding: 20px;
     border: none;
     border-radius: 12px;
    

@@ -94,7 +94,7 @@ function NoResults({inputRef, previousQuery, clearSearch}){
   }
 return (
   <div className={styles.blocks}>
-    <p>{previousQuery ? `No Results for "${previousQuery}"` : "No Results"}</p>
+    <p className={styles.label}>{previousQuery ? `No Results for "${previousQuery}"` : "No Results"}</p>
     <br/>
     <button onClick={handleSearch} className={styles.button}>
       {
