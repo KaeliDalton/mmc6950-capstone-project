@@ -7,9 +7,11 @@ export default function Header(props){
     const logout = useLogout()
     return (
         <header className={styles.container}>
+            <div className={styles.logo}>
             <Link href='/'>
              <Image src="/myreads.png" alt="MyReads Logo" width={105} height={40} className={styles.img}/>
             </Link>
+            </div>
             <div className={styles.nav}>
                 {props.isLoggedIn ? (
                     <>
