@@ -83,6 +83,10 @@
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 16pt;
 }
+
+.placeholder{
+    color: var(--background-color);
+}
 @media (max-width: 800px) {
     .Link {
         font-size: 14px;

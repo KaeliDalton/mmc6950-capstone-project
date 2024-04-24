@@ -89,7 +89,7 @@ export default function Signup(props){
                  />
                  </div>
                   <div className={styles.blocks}>
-                 <label htmlFor="password" className={styles.label}>        Password: </label>
+                 <label htmlFor="password" className={styles.label}><p className={styles.holder}>........</p>Password: </label>
                 <input
                     type="password"
                     name="password"
