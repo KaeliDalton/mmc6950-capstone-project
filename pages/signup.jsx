@@ -78,7 +78,7 @@ export default function Signup(props){
                 <h1 className={styles.title}>Create an account:</h1>
                 <form onSubmit={handleAccountCreation}  className={styles.form}>
                 <div className={styles.blocks}>
-                <label htmlFor="username" className={styles.label}>        Username: </label>
+                <p className={styles.holder}>........<label htmlFor="password" className={styles.label}>Username: </label></p>
                 <input
                     type="text"
                     name="username"

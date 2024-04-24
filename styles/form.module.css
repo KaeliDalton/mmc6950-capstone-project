@@ -67,3 +67,6 @@
     background-color: var(--note-color);
     color: var(--primary-color);
 }
+.holder{
+    color: var(--background-color);
+}
