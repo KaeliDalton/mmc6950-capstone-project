@@ -78,7 +78,7 @@ export default function Create(props){
 
             <form className={styles.form} onSubmit={handleNoteCreation} >
             <div className={styles.blocks}>
-            <p className={styles.holder}>.........<label htmlFor="title" className={styles.label}>Title: </label></p>
+            <p className={styles.holder}>..........<label htmlFor="title" className={styles.label}>Title: </label></p>
                 <input
                 type="text"
                 name="title"

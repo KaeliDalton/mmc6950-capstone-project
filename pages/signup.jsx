@@ -100,7 +100,7 @@ export default function Signup(props){
                  />
                   </div>
                  <div className={styles.blocks}>
-                 <label htmlFor="confirm-password" className={styles.label}>Confirm Password: </label>
+                 <p className={styles.holder}><label htmlFor="confirm-password" className={styles.label}>Confirm Password: </label></p>
                 <input
                     type="password"
                     name="confirm-password"
