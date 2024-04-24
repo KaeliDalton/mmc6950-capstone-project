@@ -42,6 +42,10 @@
         margin-right: auto;
         width: 50%;
     }
+    .img {
+        width: 200%;
+        height: 200%;
+    }
 }
 
 @media (max-width: 400px){
