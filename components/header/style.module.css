@@ -32,12 +32,16 @@
 @media (max-width: 800px) {
     .Link {
         font-size: 14px;
+        padding: 5px;
+        margin: 5px;
     }
 }
 
 @media (max-width: 400px){
     .Link {
         font-size: 12px;
+        padding: 5px;
+        margin: 5px;
     }
 }
 /* Need mobile responsive hamburger menu in same color */
