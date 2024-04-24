@@ -78,7 +78,7 @@ export default function Signup(props){
                 <h1 className={styles.title}>Create an account:</h1>
                 <form onSubmit={handleAccountCreation}  className={styles.form}>
                 <div className={styles.blocks}>
-                <label htmlFor="username" className={styles.label}>Username: </label>
+                <label htmlFor="username" className={styles.label}>        Username: </label>
                 <input
                     type="text"
                     name="username"
@@ -89,7 +89,7 @@ export default function Signup(props){
                  />
                  </div>
                   <div className={styles.blocks}>
-                 <label htmlFor="password" className={styles.label}>Password: </label>
+                 <label htmlFor="password" className={styles.label}>        Password: </label>
                 <input
                     type="password"
                     name="password"
