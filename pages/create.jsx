@@ -78,7 +78,7 @@ export default function Create(props){
 
             <form className={styles.form} onSubmit={handleNoteCreation} >
             <div className={styles.blocks}>
-            <p className={styles.holder}>........<label htmlFor="title" className={styles.label}>Title: </label></p>
+            <p className={styles.holder}>.........<label htmlFor="title" className={styles.label}>Title: </label></p>
                 <input
                 type="text"
                 name="title"
@@ -89,7 +89,7 @@ export default function Create(props){
                 />
                 </div>
                 <div className={styles.blocks}>
-                <p className={styles.holder}>.......<label htmlFor="author" className={styles.label}>Author: </label></p>
+                <p className={styles.holder}>........<label htmlFor="author" className={styles.label}>Author: </label></p>
                 <input
                  type="text"
                  name="author"
@@ -111,7 +111,7 @@ export default function Create(props){
                 />
                 </div>
                 <div className={styles.blocks}>
-                <label htmlFor="dateFinished" className={styles.label}>Date Finished:</label>
+                <p className={styles.holder}><label htmlFor="dateFinished" className={styles.label}>Date Finished: </label></p>
                 <input
                  type="text"
                  name="dateFinished"
@@ -122,7 +122,7 @@ export default function Create(props){
                 />
                 </div>
                 <div className={styles.blocks}>
-                <p className={styles.holder}>........<label htmlFor="noteBody" className={styles.label}>Notes: </label></p>
+                <p className={styles.holder}>..........<label htmlFor="noteBody" className={styles.label}>Notes: </label></p>
                 <input
                  type="text"
                  name="noteBody"
