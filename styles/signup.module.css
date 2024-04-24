@@ -84,7 +84,7 @@
     font-size: 16pt;
 }
 
-.placeholder{
+.holder{
     color: var(--background-color);
 }
 @media (max-width: 800px) {
