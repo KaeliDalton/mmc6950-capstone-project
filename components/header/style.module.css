@@ -34,6 +34,13 @@
         font-size: 14px;
         padding: 5px;
         margin: 5px;
+        visibility: hidden;
+    }
+    .img {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 50%;
     }
 }
 
@@ -42,6 +49,7 @@
         font-size: 12px;
         padding: 5px;
         margin: 5px;
+        visibility: hidden;
     }
 }
 /* Need mobile responsive hamburger menu in same color */
