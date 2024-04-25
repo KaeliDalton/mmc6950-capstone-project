@@ -7,12 +7,16 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 User Authentication using MongoDB as a database solution
 
 Search for books using data from the Google Books API
+<img width="1450" alt="Screenshot of searcg results for Hamlet" src="https://github.com/KaeliDalton/mmc6950-capstone-project/assets/111916086/bd78d945-13a8-44e4-a2b2-08841d3a5881">
 
 Add books to a user list
 
 View detailed book information
+<img width="1471" alt="Screenshot of information for Hamlet" src="https://github.com/KaeliDalton/mmc6950-capstone-project/assets/111916086/f11c0cb7-d182-4017-990e-f99b65aa006e">
+
 
 Create notes about previously read or currently being read books 
+<img width="1460" alt="Screenshot of Note Creation Page" src="https://github.com/KaeliDalton/mmc6950-capstone-project/assets/111916086/333381ee-b1f4-4e35-ae2c-7a9b7ad13026">
 
 View your past book notes
 
